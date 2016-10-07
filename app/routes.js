@@ -15,8 +15,10 @@
             .when('/perfil/',{
                 template: `<perfil-component></perfil-component>`
                 })
-            .when('/plazo/',{
+
+            .when('/plazos/',{
                 template: `<car-component></car-component>`
-            })
+                })
+
             }
 })();
