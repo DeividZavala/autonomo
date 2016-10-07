@@ -40,17 +40,15 @@
                 }
                 })
             .when('/mensualidad/:id',{
-                template: `<car-component></car-component>`
+                template: `<month-component></month-component>`
                 })
-<<<<<<< HEAD
 
-=======
             .when('/login',{
                 template:`<login-component></login-component>`
             })
             .otherwise({
                 redirectTo: '/'
             });
->>>>>>> 26033fc9c01c113b88e7630af05645c8edd49e00
+
             }
 })();
