@@ -15,5 +15,8 @@
             .when('/perfil/',{
                 template: `<perfil-component></perfil-component>`
                 })
+            .when('/plazo/',{
+                template: `<car-component></car-component>`
+            })
             }
 })();

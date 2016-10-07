@@ -1,5 +1,16 @@
 <h1>Esto funciona compa</h1>
 
+<div ng-repeat="car in $ctrl.data">
+	<a href="/plazos/{{car.id}}"><h4>{{car.nombre}}</h4></a>
+	
+</div>
+
 <div>
-	<h4 ng-repeat="car in $ctrl.data">{{car.nombre}}</h4>
+	<h1>48 Meses</h1>
+	<a href="/perfil/id/48"><button>Comprar</button></a>
+</div>
+
+<div>
+	<h1>60 Meses</h1>
+	<a href="/perfil/id/60"><button>Comprar</button></a>
 </div>
