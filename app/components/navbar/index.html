@@ -6,9 +6,9 @@
 		<span>¿Como funciona?</span>
 		<span><button class="btn btn-primary white">Cotiza tu auto</button></span>
 
-		<span ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">Iniciar Sesión</span>
+		<span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">Iniciar Sesión</span>
 		<img style="width:40px;" src="{{$ctrl.user.photoURL}}">
-		<span ng-show="$ctrl.user" ng-click="$ctrl.logOut()">Cerrar Sesión</span>
+		<span style="cursor:pointer;" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">Cerrar Sesión</span>
 
 </div>
 </nav>
