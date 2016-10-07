@@ -29,7 +29,7 @@
 	angular
 
 		.module('autonomo')
-		.component('catalogoComponents', catalogo);
+		.component('catalogoComponent', catalogo);
 
 
 
