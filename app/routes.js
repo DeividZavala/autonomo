@@ -18,5 +18,8 @@
             .when('/mensualidad/:id',{
                 template: `<car-component></car-component>`
                 })
+            .otherwise({
+                redirectTo: '/'
+            });
             }
 })();
