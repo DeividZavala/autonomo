@@ -1,0 +1,13 @@
+(function () {
+    angular
+        .module('autonomo')
+        .config(routes);
+
+    routes.$inject = ['$routeProvider'];
+    function routes($routeProvider) {
+        $routeProvider
+            .when('/',{
+                template:`<h1>Autonomo index</h1>`
+            })
+    }
+})();
