@@ -6,6 +6,9 @@
 	function perfilController(){
 		let self = this;
 	}
+
+  
+
 	angular
 		.module('autonomo')
 		.component('perfilComponent', perfil);
