@@ -9,5 +9,4 @@
 	angular
 		.module('autonomo')
 		.component('landingComponent', landing);
-
 })();
