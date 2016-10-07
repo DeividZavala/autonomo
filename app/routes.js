@@ -7,7 +7,7 @@
     function routes($routeProvider) {
         $routeProvider
             .when('/',{
-                template:`<h1>Autonomo index</h1>`
+                template:`<landing-component></landing-component>`
             })
             .when('/cotizacion/',{
                 template: `<catalogo-component></catalogo-component>`
