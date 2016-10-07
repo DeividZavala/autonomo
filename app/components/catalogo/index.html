@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row card-container-master">
 
 
         
@@ -14,21 +14,15 @@
                                  <div class="cover">
                                      <img src="{{producto.img}}"/>
                                  </div>
-                                 <!-- <div class="user">
-                                     <img class="img-circle" src="images/rotating_card_profile.png"/>
-                                 </div> -->
+                                 
                                  <div class="content">
                                      <div class="main">
                                          <h3 class="name">{{producto.nombre}}</h3>
                                          <p class="profession">{{producto.marca}}</p>
 
-                                         <p class="text-center">"{{producto.nombre}}"</p>
+                                         
                                      </div>
-                                     <div class="footer">
-                                         <div class="rating">
-                                             <i class="fa fa-mail-forward"></i> Auto Rotation
-                                         </div>
-                                     </div>
+                                     
                                  </div>
                              </div> <!-- end front panel -->
                              <div class="back">
@@ -41,36 +35,13 @@
                                          <p class="text-center">{{producto.desc}}</p>
 
                                          <div class="stats-container">
-                                             <!-- <div class="stats">
-                                                 <h4>235</h4>
-                                                 <p>
-                                                     Followers
-                                                 </p>
-                                             </div>
-                                             <div class="stats">
-                                                 <h4>114</h4>
-                                                 <p>
-                                                     Following
-                                                 </p>
-                                             </div>
-                                             <div class="stats">
-                                                 <h4>35</h4>
-                                                 <p>
-                                                     Projects
-                                                 </p>
-                                             </div> -->
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/:{{producto.id}}">Adquierelo Ahora</a>
+                                           
+                                             <a class="btn btn-block btn-primary" href="#/mensualidad/{{producto.id}}">Adquierelo Ahora</a>
                                          </div>
 
                                      </div>
                                  </div>
-                                 <div class="footer">
-                                     <div class="social-links text-center">
-                                         <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                                         <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                                         <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                                     </div>
-                                 </div>
+                           
                              </div> <!-- end back panel -->
                          </div> <!-- end card -->
                      </div> <!-- end card-container -->
