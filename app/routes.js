@@ -15,7 +15,7 @@
             .when('/perfil/',{
                 template: `<perfil-component></perfil-component>`
                 })
-            .when('/mensualidades/',{
+            .when('/plazos/',{
                 template: `<car-component></car-component>`
                 })
             }
