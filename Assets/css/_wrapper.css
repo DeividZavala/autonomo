@@ -1,0 +1,14 @@
+h1, h2, h3 {
+  color: white;
+}
+
+#wrapper{
+   margin: 0px auto 0px auto;
+   width: 1150px;
+   min-height: 100%;
+   *height: 100%; /* Fix para IE */
+   _height: 100%; /* Fix para IE6 */
+   background-color: black;
+   background-position: center top;
+   opacity: 0.8;
+}
