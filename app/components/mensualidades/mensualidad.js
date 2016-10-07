@@ -1,16 +1,23 @@
 (function(){
-	let month = {
-		controller: MonthController,
+	let car = {
+		controller: CarController,
 		templateUrl: 'app/components/mensualidades/mensualidad.html'
 	}
 
-	function MonthController(Api_service){
-		let months = this;
+	function CarController($http){
+		let cars = this;
 
-		}
+		$http({
+			method: 'GET',
+			url: 'http://54.244.191.132/topten/'
+
+		}).then(function(response){
+			cars.data = response.data;
+			console.log(cars.data)
+		});
 	}
 
 	angular
 		.module('autonomo')
-		.component('monthComponent', month);
+		.component('carComponent', car);
 })();

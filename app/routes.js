@@ -40,7 +40,7 @@
                 }
                 })
             .when('/mensualidad/:id',{
-                template: `<month-component></month-component>`
+                template: `<car-component></car-component>`
                 })
 
             .when('/login',{
