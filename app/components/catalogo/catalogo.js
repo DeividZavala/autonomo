@@ -7,15 +7,12 @@
 		templateUrl: 'app/components/catalogo/index.html'
 	}
 
-	function CatalogoController($http){
+	function CatalogoController(Api_service){
 
 		let auto = this;
 
-		$http({
-			method : 'GET',
-			url: 'http://54.244.191.132/topten'
-		})
-		.then(function(response){
+		
+		Api_service.alls().then(function(response){
 
 			auto.data = response.data;
 
