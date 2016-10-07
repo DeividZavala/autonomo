@@ -1,2 +1,3 @@
 /* Main styles of the project */
-@import "_header.css"
+@import "_header.css";
+@import "_navbar.css";
