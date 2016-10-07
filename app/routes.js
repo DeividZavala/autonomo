@@ -13,6 +13,4 @@
                 template: `<catalogo-component></catalogo-component>`
                 })
             }
-    }
-
 })();
