@@ -100,14 +100,51 @@ body {
 	border-radius: 4px;
     padding
 }
+
+
 .card .cover{
-    height: 185px;
+    height: 195px;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
+    text-align:center;
+
 }
-.card .cover img{
-    width: 100%;
+
+@media (max-width: 1680px) {
+     .card .cover img{
+       
+          width: 90%;
+    }
 }
+
+@media (max-width: 1280px) {
+     .card .cover img{
+   
+          width: 85%;
+    }
+}
+
+@media (max-width: 1024px) {
+     .card .cover img{
+        padding-top: 30px;
+          width: 85%;
+    }
+}
+
+@media (max-width: 991px) {
+     .card .cover img{
+        
+          width: 35%;
+    }
+}
+
+@media (max-width: 330px) {
+     .card .cover img{
+        
+          width: 20%;
+    }
+}
+
 .card .user{
     border-radius: 50%;
     display: block;
