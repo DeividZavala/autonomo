@@ -3,7 +3,6 @@
         .module('autonomo')
         .config(routes)
 
-
         .run(["$rootScope", "$location", function($rootScope, $location) {
           $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
             // We can catch the error thrown when the $requireSignIn promise is rejected
@@ -21,13 +20,10 @@
 
 
     routes.$inject = ['$routeProvider'];
-
-
-
     function routes($routeProvider) {
         $routeProvider
             .when('/',{
-                template:`<h1>Autonomo index</h1>`
+                template:`<landing-component></landing-component>`
             })
             .when('/cotizacion/',{
                 template: `<catalogo-component></catalogo-component>`
@@ -49,5 +45,8 @@
             .when('/login',{
                 template:`<login-component></login-component>`
             })
+            .otherwise({
+                redirectTo: '/'
+            });
             }
 })();
