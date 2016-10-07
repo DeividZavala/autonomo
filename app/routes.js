@@ -12,5 +12,8 @@
             .when('/cotizacion/',{
                 template: `<catalogo-component></catalogo-component>`
                 })
+            .when('/perfil/',{
+                template: `<perfil-component></perfil-component>`
+                })
             }
 })();
