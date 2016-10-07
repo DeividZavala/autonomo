@@ -18,10 +18,16 @@
 .nav ul li, .nav ul, .nav h2{
 	display: inline-block;
 }
-.right{
+	.right{
+		display: none;
+	}
+@media(min-width: 600px){
+
+	.right{
 	display: inline-block;
 	float: right;
 	margin-top: 10px;
+}
 }
 .white{
 	background: white;

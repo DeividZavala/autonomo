@@ -1,4 +1,4 @@
 (function () {
     angular
-        .module('autonomo',['ngRoute']);
+        .module('autonomo',['ngRoute','firebase']);
 })();
