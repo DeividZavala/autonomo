@@ -12,10 +12,33 @@
         </article>
 
         <article class="col-sm-12 col-md-8">
+<!-- <<<<<<< HEAD
+            <div class="panel panel-dark">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tus Autos</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre del carro</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="car in $ctrl.listaCoches">
+                                <th>{{$index+1}}</th>
+                                <th>{{car.auto}}</th>
+                                <th>{{car.plazo}}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+======= -->
             <h5>Tu garage</h5>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   
-                <div class="panel panel-default" ng-repeat="car in $ctrl.userCars">
+                <div class="panel panel-default" ng-repeat="car in $ctrl.toches">
                     <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="!#/#{{$index+1}}" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none">
@@ -46,6 +69,7 @@
                         
                     </div>
                     </div>
+
                 </div>
             </div>
         </article>
