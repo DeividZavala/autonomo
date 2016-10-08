@@ -1,28 +1,46 @@
-<div class="row" id="wrapper">
-
-    <div class="col-md-8">
-        <h1>Perfil Usuario</h1>
-
-        <div class="row">
-            <div class="col-md-4">
-              <h3>IMG</h3>
+<section class="container">
+    <section class="perfil row">
+    
+        <article class="col-sm-12 col-md-4">
+            <div class="container_userData">
+                <figure class="containder_userImg col-md-offset-4 col-xs-offset-4">
+                    <img class="img-responsive" ng-src="{{$ctrl.user.photoURL}}" alt="Foto de perfil">
+                </figure>
+                <strong>{{$ctrl.user.displayName}}</strong>
+                <strong>{{$ctrl.user.email}}</strong>
             </div>
-            <div class="col-md-4">
-              <h3>Información</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    60%
+                </div>
             </div>
-            <div class="col-md-4">
-              <h3>Pagos</h3>
+        </article>
+
+        <article class="col-sm-12 col-md-8">
+            <div class="panel panel-dark">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tus Autos</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre del carro</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="car in $ctrl.userCars">
+                                <th>{{$index+1}}</th>
+                                <th>{{car.nombre}}</th>
+                                <th>{{car.precio | currency}}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div>
+        </article>
 
-    <div class="col-md-4">
-        <br></br>
-
-        <h2>IMG</h2>
-        <h3>Nombre U.</h3>
-        <h3>Direccion</h3>
-        <h3>Telefono</h3>
-
-    </div>
-</div>
+    </section>
+</section>
