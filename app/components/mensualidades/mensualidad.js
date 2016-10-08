@@ -5,9 +5,10 @@
 	}
 
 
-
-	function CarController($http){
+	CarController.$inject=['$routeParams','$http'];
+	function CarController($routeParams,$http){
 		let cars = this;
+		cars.auto = $routeParams.id;
 
 		$http({
 			method: 'GET',
