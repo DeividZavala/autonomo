@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  margin-bottom: 20%;
+  margin-bottom: 25%;
 }
 
 .footer {
@@ -18,4 +18,11 @@ body {
 
 .respfooter {
   padding: 2%;
+}
+
+.img-footer{
+	max-width: 150px;
+}
+.social_icon {
+	max-width: 50px;
 }
