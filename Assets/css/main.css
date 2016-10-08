@@ -1,9 +1,8 @@
 /* Main styles of the project */
-*{
-    margin: 0;
-    padding: 0;
-}
 @import "_navbar.css";
 @import "_rotating_card.css";
 @import "_wrapper.css";
 @import "_login.css";
+@import "_owl_carousel.css";
+@import "_owl_transitions.css";
+@import "_rotating_card.css";
