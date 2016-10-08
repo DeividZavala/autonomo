@@ -8,6 +8,7 @@
 	CarController.$inject=['$routeParams','$http'];
 	function CarController($routeParams,$http){
 		let cars = this;
+		cars.tab=2;
 		cars.auto = $routeParams.id;
 		console.log(cars.auto)
 
