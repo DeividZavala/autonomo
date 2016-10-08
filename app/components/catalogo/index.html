@@ -18,9 +18,16 @@
             <h1> Encuentra tu auto ideal </h1>
         </div> 
 
-<div id="owl-demo" class="owl-carousel owl-theme">
-    <p></p>
-  <div class="item col-md-4" ng-repeat="producto in $ctrl.data">
+
+
+<br>
+<br>
+<br>
+<br>
+<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
+
+
+<div class="col-md-12" ng-repeat="producto in $ctrl.data">
 
 
                     <div class="card-container">
@@ -62,7 +69,17 @@
                      </div> <!-- end card-container -->                     
 
         </div>
-</div>
+
+</slick>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -74,12 +91,10 @@
     </div>
 </div>
 
-<div class="customNavigation">
-  <a class="btn prev">Anterior</a>
-  <a class="btn next">Siguiente</a>
-  <a class="btn play">Autoplay</a>
-  <a class="btn stop">Detener</a>
-</div>
+
+
+
+
 
 
 
