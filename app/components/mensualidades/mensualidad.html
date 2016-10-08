@@ -1,36 +1,71 @@
-
-	<div class="card">
-	  <img class="card-img-top" src="Assets/img/tesla.jpg" alt="Card image cap">
-	  <div class="card-block">
-	    <h4 class="card-title">Model 3</h4>
-	    <p class="card-text">Descripción Breve del auto</p>
-	    
-	  </div>
-	</div>
+<style type="text/css">
+	.payment{
+		display: flex;
+		list-style: none;
+		justify-content: center;
+	}	
 	
-</div>
+	.py{
+		color: black;
+		text-align: center;
+	}
+</style>
 
-		<section ng-controller="CarController as panel">
-		<ul class="nav nav-pills" >
+
+<h1 class="py">Tu Auto</h1>
 			
-			<li ng-class = "{active:panel.isSelected(1)}">
-				<a href ng-click="panel.selectTab(1)">48 meses</a>
-			</li>
-			<li ng-class = "{active:panel.isSelected(1)}">
-				<a href ng-click="panel.selectTab(1)">60 meses</a>
-			</li>
+	</div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-8">
+    <div class="thumbnail">
+      <img class="img-responsive" ng-src="{{$ctrl.data[0].img}}" style="height:50vh;">
+      <div class="caption">
+        <h3 class="py">{{$ctrl.data[0].nombre}}</h3>
+        <p>{{$ctrl.data[0].desc}}</p>
+        
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <section>
+		<ul class="payment" >
 			
+			<li ng-class = "{active:$ctrl.isSelected(1)}">
+				<a class="btn btn-default" href ng-click="$ctrl.selectTab(1)">48 meses</a>
+			</li>
+			<li ng-class = "{active:$ctrl.isSelected(2)}">
+				<a class="btn btn-default" href ng-click="$ctrl.selectTab(2)">60 meses</a>
+			</li>
+
 			
 
 
 		</ul>
 			
-			<div class="panel" ng-show="panel.tab===1">
-				<h2>48 Mensualidades de $3000</h2>
+			<div class="panel" ng-show="$ctrl.tab===1">
+				<h2 class="py">48 Mensualidades de:</h2>
+				<h1 class="py">$3000</h1>
+				<hr>
+				<h2 class="py">Enganche de:</h2>
+				<h1 class="py">$30000</h1>
+				<hr>
+				<a class="btn btn-default btn-lg btn-block" href="#/perfil">Agrega al Garage</a>
+
+
 			</div>
-			<div class="panel" ng-show="panel.isSelected(2)">
-				<h3>60 Mensualidades de $2500</h3>
+			<div class="panel" ng-show="$ctrl.isSelected(2)">
+				<h2 class="py">60 Mensualidades de:</h2>
+				<h1 class="py">$2000</h1>
+				<hr>
+				<h2 class="py">Enganche de:</h2>
+				<h1 class="py">$20000</h1>
+				<hr>
+				<a class="btn btn-default btn-lg btn-block" href="#/perfil">Agrega al Garage</a>
 			</div>
 			
-	</section>	
-	</div>
+	</section>
+    </div>
+  </div>
+</div>
