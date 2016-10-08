@@ -10,10 +10,14 @@ body {
     outline: 0 !important;
 }
 
-.card-container-master{
 
 
-    padding-top:20px;
+
+
+.card-container-master .titulo h1{
+
+    text-align: center;
+    color:#111;
 
 }
 /* entire container, keeps perspective */
@@ -166,6 +170,9 @@ body {
 }
 .card .content .main {
     min-height: 160px;
+}
+.main  h3{
+    color:#111;
 }
 .card .back .content .main {
     height: 215px;
