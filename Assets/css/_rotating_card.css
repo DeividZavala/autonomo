@@ -110,7 +110,10 @@ body {
     height: 195px;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
-    text-align:center;
+    text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
@@ -138,14 +141,14 @@ body {
 @media (max-width: 991px) {
      .card .cover img{
         
-          width: 35%;
+          width: 70%;
     }
 }
 
 @media (max-width: 330px) {
      .card .cover img{
         
-          width: 20%;
+          width: 70%;
     }
 }
 
