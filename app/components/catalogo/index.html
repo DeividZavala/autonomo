@@ -1,15 +1,26 @@
+
+<style type="text/css">
+    
+    #owl-demo .item{
+    background: #111;
+    
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+</style>
 <div class="container">
     <div class="row card-container-master">
 
         <div class="titulo">            
             <h1> Encuentra tu auto ideal </h1>
-        </div>
-  
-        
-        
-        <div class="col-md-4" ng-repeat="producto in $ctrl.data">
+        </div> 
 
-
+<div id="owl-demo" class="owl-carousel owl-theme">
+    <p></p>
+  <div class="item col-md-4" ng-repeat="producto in $ctrl.data">
 
 
                     <div class="card-container">
@@ -48,18 +59,31 @@
                            
                              </div> <!-- end back panel -->
                          </div> <!-- end card -->
-                     </div> <!-- end card-container -->
-                            
-
-
-
-
-
-
+                     </div> <!-- end card-container -->                     
 
         </div>
+</div>
+
+
+
+
+
+
+
+
     </div>
 </div>
+
+<div class="customNavigation">
+  <a class="btn prev">Anterior</a>
+  <a class="btn next">Siguiente</a>
+  <a class="btn play">Autoplay</a>
+  <a class="btn stop">Detener</a>
+</div>
+
+
+
+
 
 
 
