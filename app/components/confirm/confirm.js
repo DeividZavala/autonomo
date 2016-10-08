@@ -5,8 +5,8 @@
 		controller:confirmController
 	}
 	
-	confirmController.$inject = ['$routeParams','$firebaseAuth'];
-	function confirmController($routeParams,$firebaseAuth){
+	confirmController.$inject = ['$routeParams','$firebaseAuth','$firebaseArray'];
+	function confirmController($routeParams,$firebaseAuth,$firebaseArray){
 		var self = this;
 		console.log($routeParams.id);
 		console.log($routeParams.plazo);
@@ -34,7 +34,7 @@
 		self.auth.$signInWithPopup("google")
 		.then(function(result) {
 		  console.log("Signed in as:", result.user.uid);
-		  window.location.replace("/#/perfil");
+		  // window.location.replace("/#/perfil");
 		  self.user = {
 		  	id:result.user.uid,
 		  	displayName:result.user.displayName,
@@ -49,6 +49,23 @@
 		return self.user;
 
 		} //fin login
+
+		self.guardaCoche = function(){
+			self.gCoche = {
+				user:self.user.id,
+				auto:self.cotizacion.auto,
+				plazo:self.cotizacion.plazo
+			}
+			var ref = firebase.database().ref('cochera');
+			var list = $firebaseArray(ref);
+			list.$add(self.gCoche)
+			.then(function(ref) {
+			  var id = ref.key;
+			  console.log("coche agregado " + id);
+			  console.log(list.$indexFor(id)); // returns location in the array
+			});
+
+		}//GuardaCoche
 		
 
 	}

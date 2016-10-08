@@ -5,11 +5,13 @@
 	<p>El pinche carro:{{$ctrl.cotizacion.auto}}</p>
 	<p>El pinche carro:{{$ctrl.cotizacion.plazo}}</p>
 		</div>
-		<div class="col-md-4">
-			<button ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">¡Metelo a tu cochera!</button>
+		<div ng-hide="$ctrl.user" class="col-md-4">
+			<h3>¡Estas a 1 solo paso para meterlo a tu cochera!</h3>
+			<button  ng-click="$ctrl.logIn()">¡Inicia Sesión!</button>
 		</div>
-		<div class="col-md-4">
-			<button ng-show="$ctrl.user" ng-click="">¡Metelo a tu cochera!2</button>
+		<div ng-show="$ctrl.user" class="col-md-4">
+			<h3>¡Ahora si!</h3>
+			<button  ng-click="$ctrl.guardaCoche()">¡Metelo a tu cochera!2</button>
 		</div>
 	</article>
 </section>
