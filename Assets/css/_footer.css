@@ -4,12 +4,8 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 25%;
-}
-
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: auto;
@@ -24,5 +20,5 @@ body {
 	max-width: 150px;
 }
 .social_icon {
-	max-width: 50px;
+	max-width: 50px;	
 }
