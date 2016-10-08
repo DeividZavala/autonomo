@@ -3,12 +3,14 @@
 		templateUrl:'app/components/perfil/index.html',
 		controller:perfilController
 	}
-	function perfilController($firebaseAuth,Api_service,$firebaseArray){
+	function perfilController($firebaseAuth,Api_service,$firebaseArray,$http){
 		let self = this;
 
 		self.user = {};
 		self.listaCoches = [];
+		self.toches = [];
 		self.auth = $firebaseAuth();
+
 
 		self.auth.$onAuthStateChanged(function(user) {
 		  if (user) {
@@ -33,8 +35,19 @@
 			           		auto:lista.auto,
 			           		plazo:lista.plazo,
 			           		user:lista.user
-			           	}); 
-			        })
+			           	});
+			           	//pedimos los coches
+			           	$http({
+							method: 'GET',
+							url: 'http://54.244.191.132/topten/'+lista.auto
+
+						})
+						.then(function(response){
+							self.toches.push(response.data);
+						});
+			           	//coches 
+			        }); //for ehach
+			        console.log(self.toches);
 			    });
 			
 
@@ -42,7 +55,7 @@
 		  } else {
 		    console.log("Signed out");
 		  }
-		});
+		}); //detecta usuer
 
 		Api_service.alls().then(function (response) {
 			self.userCars = response.data
