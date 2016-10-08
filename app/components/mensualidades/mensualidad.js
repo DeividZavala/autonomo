@@ -5,12 +5,27 @@
 	}
 
 
-	CarController.$inject=['$routeParams','$http'];
-	function CarController($routeParams,$http){
+	CarController.$inject=['$routeParams','$http','$firebaseAuth','$firebaseArray'];
+	function CarController($routeParams,$http,$firebaseAuth,$firebaseArray){
 		let cars = this;
+		let self = this;
 		cars.tab=2;
 		cars.auto = $routeParams.id;
-		console.log(cars.auto)
+		console.log(cars.auto);
+		self.auth = $firebaseAuth();
+
+		self.auth.$onAuthStateChanged(function(user) {
+		  if (user) {
+		    self.user = {
+			  	id:user.uid,
+			  	displayName:user.displayName,
+			  	email:user.email,
+			  	photoURL:user.photoURL
+		  }
+		  } else {
+		    console.log("Signed out");
+		  }
+		}); //checando el usuario
 
 		$http({
 			method: 'GET',
@@ -18,19 +33,21 @@
 
 		}).then(function(response){
 			cars.data = response.data;
-			console.log(cars.data)
-		});
-		cars.monthCar = function(meses){
+			console.log(cars.data);
+			cars.monthCar = function(meses){
 			mensualidad = meses;
 			month=cars.data.precio/mensualidad;
 			console.log(month)
 			return month;
-		};
+		}; //month
 		cars.feeCar = function(){
 			fee=cars.data.precio*.01;
 			console.log(fee)
 			return fee;
-		};
+		};//fee
+		});
+		
+		
 
 		this.selectTab = function(setTab){
 			this.tab = setTab;
@@ -39,7 +56,32 @@
 			return this.tab === checkTab; 
 		};
 		
-	}
+		self.user = {};
+		self.cotizacion = {
+			auto:$routeParams.id,
+			// plazo:self.plazo
+		};
+
+		self.guardaCoche = function(meses){
+			self.gCoche = {
+				user:self.user.id,
+				auto:self.cotizacion.auto,
+				plazo:meses
+			}
+			var ref = firebase.database().ref('cochera');
+			var list = $firebaseArray(ref);
+			list.$add(self.gCoche)
+			.then(function(ref) {
+			  var id = ref.key;
+			  console.log("coche agregado " + id);
+			  console.log(list.$indexFor(id)); // returns location in the array
+			});
+		window.location.replace("/#/perfil");
+		}//GuardaCoche
+
+
+
+	} //controller
 
 	angular
 		.module('autonomo')

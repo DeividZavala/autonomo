@@ -64,7 +64,7 @@
 			  console.log("coche agregado " + id);
 			  console.log(list.$indexFor(id)); // returns location in the array
 			});
-
+		window.location.replace("/#/perfil");
 		}//GuardaCoche
 		
 
