@@ -5,16 +5,19 @@
         <title>Autonomo</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
         <link rel="stylesheet" href="Assets/css/main.css">
         <!-- fa fa icons -->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
     <body>
-        <navbar-component></navbar-component>
-  
-        <main ng-view></main>
+        <navbar-component></navbar-component>      
+
+        <main ng-view></main>   
 
         <footer-component></footer-component>
+
         <!-- Jquery -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- Bootstrap -->
@@ -34,7 +37,10 @@
         <!-- AngularFire -->
         <script src="bower_components/angularfire/dist/angularfire.js"></script>
         <script src="bower_components/firebase/firebase.js"></script>
-        <script src="Assets/js/owl.carousel.js"></script>
+        <script src="bower_components/slick-carousel/slick/slick.js"></script>
+        <script src="bower_components/angular-slick/dist/slick.js"></script>
+
+        
         <script>
           // Initialize Firebase
           var config = {
@@ -54,6 +60,7 @@
         <script src="app/components/catalogo/catalogo.js"></script>
         <script src="app/components/mensualidades/mensualidad.js"></script>
         <script src="app/components/perfil/perfil.js"></script>
+
         <script src="app/components/login/login.js"></script>
         <script src="app/components/confirm/confirm.js"></script>
 

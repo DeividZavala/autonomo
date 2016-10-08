@@ -1,15 +1,33 @@
+
+<style type="text/css">
+    
+    #owl-demo .item{
+    background: #111;
+    
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+</style>
 <div class="container">
     <div class="row card-container-master">
 
         <div class="titulo">            
             <h1> Encuentra tu auto ideal </h1>
-        </div>
-  
-        
-        
-        <div class="col-md-4" ng-repeat="producto in $ctrl.data">
+        </div> 
 
 
+
+<br>
+<br>
+<br>
+<br>
+<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
+
+
+<div class="col-md-12" ng-repeat="producto in $ctrl.data">
 
 
                     <div class="card-container">
@@ -48,18 +66,39 @@
                            
                              </div> <!-- end back panel -->
                          </div> <!-- end card -->
-                     </div> <!-- end card-container -->
-                            
-
-
-
-
-
-
+                     </div> <!-- end card-container -->                     
 
         </div>
+
+</slick>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 
