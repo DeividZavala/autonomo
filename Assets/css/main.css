@@ -1,5 +1,6 @@
 /* Main styles of the project */
 @import "_navbar.css";
+@import "_footer.css";
 @import "_rotating_card.css";
 @import "_wrapper.css";
 @import "_login.css";
