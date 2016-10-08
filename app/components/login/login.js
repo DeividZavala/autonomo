@@ -45,6 +45,7 @@
 		self.logOut = function(){
 			self.auth.$signOut()
 			self.user = false;
+			window.location.replace("/");
 		} //cerrar sesión
 
 

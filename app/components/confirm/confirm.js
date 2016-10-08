@@ -1,11 +1,20 @@
 (function(){
-	let navbar = {
-		templateUrl:'app/components/navbar/index.html',
-		controller:navbarController
+
+	let confirm = {
+		templateUrl:'app/components/confirm/confirm.html',
+		controller:confirmController
 	}
-	function navbarController($firebaseAuth){
-		let self = this;
-		self.user = {}
+	
+	confirmController.$inject = ['$routeParams','$firebaseAuth'];
+	function confirmController($routeParams,$firebaseAuth){
+		var self = this;
+		console.log($routeParams.id);
+		console.log($routeParams.plazo);
+		self.cotizacion = {
+			auto:$routeParams.id,
+			plazo:$routeParams.plazo
+		};
+
 		self.auth = $firebaseAuth();
 
 		self.auth.$onAuthStateChanged(function(user) {
@@ -19,34 +28,36 @@
 		  } else {
 		    console.log("Signed out");
 		  }
-		});
+		}); //checando el usuario
 
 		self.logIn = function(){
-		self.auth.$signInWithPopup("google").then(function(result) {
+		self.auth.$signInWithPopup("google")
+		.then(function(result) {
 		  console.log("Signed in as:", result.user.uid);
+		  window.location.replace("/#/perfil");
 		  self.user = {
 		  	id:result.user.uid,
 		  	displayName:result.user.displayName,
 		  	email:result.user.email,
 		  	photoURL:result.user.photoURL
 		  }
+
 		}).catch(function(error) {
 		  console.error("Authentication failed:", error);
 		  self.user = false;
 		});
 		return self.user;
 
-	} //fin login
-
-	self.logOut = function(){
-		self.auth.$signOut()
-		self.user = false;
-		// window.location.replace("/");
-	} //cerrar sesión
+		} //fin login
+		
 
 	}
+
 	angular
 		.module('autonomo')
-		.component('navbarComponent',navbar);
+		.component('confirmComponent',confirm);
+
+
+
 
 })();
