@@ -9,14 +9,10 @@
                 <strong>{{$ctrl.user.displayName}}</strong>
                 <strong>{{$ctrl.user.email}}</strong>
             </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
-            </div>
         </article>
 
         <article class="col-sm-12 col-md-8">
+<!-- <<<<<<< HEAD
             <div class="panel panel-dark">
                 <div class="panel-heading">
                     <h3 class="panel-title">Tus Autos</h3>
@@ -31,13 +27,49 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="car in $ctrl.userCars">
+                            <tr ng-repeat="car in $ctrl.listaCoches">
                                 <th>{{$index+1}}</th>
-                                <th>{{car.nombre}}</th>
-                                <th>{{car.precio | currency}}</th>
+                                <th>{{car.auto}}</th>
+                                <th>{{car.plazo}}</th>
                             </tr>
                         </tbody>
                     </table>
+======= -->
+            <h5>Tu garage</h5>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+                <div class="panel panel-default" ng-repeat="car in $ctrl.toches">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="!#/#{{$index+1}}" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none">
+                        <strong>{{car.nombre}}</strong>
+                        </a>
+                    </h4>
+                    </div>
+                    <div id="{{$index+1}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body row">
+                        <div class="col-sm-12 col-md-6">
+
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>{{car.marca}}</strong></li>
+                                <li class="list-group-item">{{car.desc}}</li>
+                                <li class="list-group-item"><a href="{{car.mas_info}}">Más info</a></li>
+                            </ul>
+
+                        </div>
+                        <figure class="col-sm-12 col-md-6">
+                            <img class="img-responsive" ng-src="{{car.img}}" alt="">
+                        </figure>
+
+                        <div class="progress col-sm-12 col-md-12" style="margin-top:2%;">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                60%
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+
                 </div>
             </div>
         </article>
