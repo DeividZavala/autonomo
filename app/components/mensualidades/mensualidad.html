@@ -1,48 +1,36 @@
 
-<style type="text/css">
-	.texto{
-		font-size: 1200%;
-		color: black;
-	}
-	.texto .meses{
-		font-size: 50%;
-	}
-	.buttonText{
-		font-size: 100%;
-	}
-	.titulo{
-		font-size: 500%;
-		color:black;
-	}
-	.p{
-		max-height: 100%;
-		max-width: 100%;
-	}
-	.thumbnail:hover{
-		background-color: rgba(0, 0, 0, 0.7);
-	}
-</style>
-<br><br>
-<h1 class="titulo" align="center"><strong>Selecciona Tu Forma De Pago</strong></h1>
-<br>
-<br>
-<section class="p">
-<div class="row col-md-10 col-md-offset-1">
-	
-		<a href=""><div class="col-xs-12 col-sm-12 col-md-6">
-		    <div class="thumbnail" align="center">
-		    	<div class="texto">48 <div class="meses"> Meses</div></div>
-		    	
-		    </div>
-		 </div></a>
-	
-	
-		<a href=""><div class="col-xs-12 col-sm-12 col-md-6">
-		    <div class="thumbnail" align="center">
-		    	<div class="texto">60 <div class="meses"> Meses</div></div>
-		    	
-		    </div>
-		 </div></a>
+	<div class="card">
+	  <img class="card-img-top" src="Assets/img/tesla.jpg" alt="Card image cap">
+	  <div class="card-block">
+	    <h4 class="card-title">Model 3</h4>
+	    <p class="card-text">Descripción Breve del auto</p>
+	    
+	  </div>
+	</div>
 	
 </div>
-</section>
+
+		<section ng-controller="CarController as panel">
+		<ul class="nav nav-pills" >
+			
+			<li ng-class = "{active:panel.isSelected(1)}">
+				<a href ng-click="panel.selectTab(1)">48 meses</a>
+			</li>
+			<li ng-class = "{active:panel.isSelected(1)}">
+				<a href ng-click="panel.selectTab(1)">60 meses</a>
+			</li>
+			
+			
+
+
+		</ul>
+			
+			<div class="panel" ng-show="panel.tab===1">
+				<h2>48 Mensualidades de $3000</h2>
+			</div>
+			<div class="panel" ng-show="panel.isSelected(2)">
+				<h3>60 Mensualidades de $2500</h3>
+			</div>
+			
+	</section>	
+	</div>
