@@ -153,7 +153,13 @@ section.l-slider{
 
 .slider3{
 
-  background: url('Assets/img/index_backgroud_3.jpg');
+  background: url('/Assets/img/index_backgroud_3.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.sliderText h1{
+
+  font-weight: 900;
+  font-size: 4em;
 }
