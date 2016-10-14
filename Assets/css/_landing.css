@@ -10,6 +10,13 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
+
+section.l-slider{
+  position:relative;
+}
+
+
+
 .carousel {
   height: 100%;
   margin-bottom: 58px;
@@ -17,6 +24,9 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 /* Declare heights because of positioning of img element */
@@ -103,4 +113,11 @@ body {
   .featurette-heading {
     margin-top: 120px;
   }
+}
+
+
+
+.sectionFormat{
+
+  height: 100vh;
 }

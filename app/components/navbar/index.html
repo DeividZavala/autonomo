@@ -1,29 +1,32 @@
-<nav class="nava">
-<!-- <figure class="logo"> -->
+ <nav class="nava">
+<figure class="logo">
 <a href="#/">
-  <img style="height:100%;margin:5px 0 0 30px;" src="Assets/img/logo_sin_texto.png">
+  <img style="height:45px;margin:5px 0 0 0px;" src="Assets/img/logo_sin_texto.png">
 </a>
-<!-- </figure> -->
+</figure>
 <div class="right">
 
-		
-		<span>
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary btn-lg como_funciona" data-toggle="modal" data-target="#myModal">
-				¿Como funciona?
-			</button>
-		</span>
-		<span><a href="#/cotizacion" class="btn btn-primary white">Cotiza tu auto</a></span>
+    
+    <span>
+ 
+      <button type="button" class="btn btn-primary btn-lg btn-circle" data-toggle="modal" data-target="#myModal">
+        ¿Como funciona?
+      </button>
+    </span>
+    <span><a href="#/cotizacion" class="btn btn-primary white btn-circle">Cotiza tu auto</a></span>
 
-		<span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">Iniciar Sesión</span>
+    <span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">Iniciar Sesión</span>
     <a href="#/perfil">
-		<img ng-show="$ctrl.user" style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
+    <img ng-show="$ctrl.user" style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
     </a>
 
-		<span style="cursor:pointer;" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">Cerrar Sesión</span>
+    <span style="cursor:pointer;" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">Cerrar Sesión</span>
 
 </div>
 </nav>
+
+ 
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
