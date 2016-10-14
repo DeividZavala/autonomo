@@ -1,13 +1,7 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+.l-bg-silver{
 
-body {
-  color: #5a5a5a;
+  background-color: #E5E9ED;
 }
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
 
 /* Carousel base class */
 
@@ -18,7 +12,7 @@ section.l-slider{
 
 
 .carousel {
-  height: 100%;
+  height: 100vh;
   margin-bottom: 58px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -31,7 +25,7 @@ section.l-slider{
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 600px;
+  height: 100vh;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -107,17 +101,59 @@ section.l-slider{
   .featurette-heading {
     font-size: 100px;
   }
+
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
+  .sectionFormat{
+ 
+  height: 100vh;
+}
 }
 
 
 
-.sectionFormat{
 
-  height: 100vh;
+.lbtn-white{
+
+      color: #fff;
+    background-color: rgba(255,255,255,.5);
+    border-color: #fff;
+}
+
+.lbtn-white:hover, .lbtn-white:active{
+
+      color: #fdfdfd;
+    background-color: rgba(255,255,255,.3) !important;
+    border-color: #fff;
+}
+
+.slider1{
+
+  background: url('http://eh5153jjbilvhwnq18672ksy.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/happy-driver-sunlinght.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.slider2{
+
+  background: url('http://replacecarkey.org/wp-content/uploads/2014/10/car-key-replacement.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.slider3{
+
+  background: url('/Assets/img/index_backgroud_3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sliderText h1{
+
+  font-weight: 900;
+  font-size: 4em;
 }

@@ -1,10 +1,17 @@
 (function(){
-	let landing = {
+	var landing = {
 		templateUrl:'app/components/landing/index.html',
 		controller:landingController
 	}
 	function landingController(){
-		let self = this;
+		var self = this;
+
+
+		 $("#Carousel").carousel({
+
+        interval:4000
+    });
+
 	}
 	angular
 		.module('autonomo')
