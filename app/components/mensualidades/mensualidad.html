@@ -101,7 +101,7 @@
 		    
 		  </div>
 		   <div class="col-xs-12 col-sm-12  col-md-4 col-lg-4 container-d-caja-mens">
-		    <div class="d-caja-mens">
+		    <div class="d-caja-mens text-center">
 		     
 				<ul class="nav nav-tabs nav-justified" >
 					
@@ -118,22 +118,32 @@
 				</ul>
 					
 					<div class="panel" ng-show="$ctrl.tab===1" >
-						<h4 class="py">48 Mensualidades de:</h4>
-						<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1>
+						<h1 class="py">$4289.00</h1>
+					<!-- 	<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1> -->
+						<h4 class="py">48 Mensualidades </h4>
+						
 						<hr>
-						<h4 class="py">Enganche de:</h4>
-						<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
+
+		<!-- 			<h1 class="py">{{$ctrl.feeCar() | currency}}</h1> -->
+						<h1 class="py">$20,400.00</h1>
+						<h4 class="py">Enganche</h4>
+						
 						<hr>
 						<button ng-click="$ctrl.guardaCoche(48)" class="btn btn-danger btn-lg btn-block">Agrega al Garage</button>
 
 
 					</div>
 					<div class="panel" ng-show="$ctrl.isSelected(2)">
-						<h4 class="py">60 Mensualidades de:</h4>
-						<h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1>
+						<h1 class="py">$2289.00</h1>
+				   <!-- <h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1> -->
+						<h4 class="py">60 Mensualidades </h4>
+
+						
 						<hr>
-						<h4 class="py">Enganche de:</h4>
-						<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
+				   <!-- <h1 class="py">{{$ctrl.feeCar() | currency}}</h1> -->
+						<h1 class="py">$38,700.00</h1>
+						<h4 class="py">Enganche</h4>
+						
 						<hr>
 						<button ng-click="$ctrl.guardaCoche(60)" class="btn btn-danger btn-lg btn-block">Agrega al Garage</button>
 					</div>
