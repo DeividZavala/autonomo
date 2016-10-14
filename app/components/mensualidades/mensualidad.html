@@ -7,73 +7,81 @@
 	}
 	
 	.py{
-		color: black;
-		text-align: center;
+		padding-left: 10px;
+
 	}
-	.py a{
-		color: black;
-		font-size: 200%;
-	}
+
 	
 
 </style>
 
 
-<h1 class="py">Tu Auto</h1>
-			
-
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8">
-    <div class="thumbnail">
-      <img class="img-responsive" ng-src="{{$ctrl.data.img}}" >
-      <div class="caption">
-        <h3 class="py">{{$ctrl.data.nombre}}</h3>
-        <p>{{$ctrl.data.desc}}</p>
-        
-      </div>
-    </div>
-  </div>
-   <div class="col-xs-6 col-sm-6 col-md-4">
-    <div class="thumbnail">
-     
-		<ul class="nav nav-tabs nav-justified" >
-			
-			<li class="py" ng-class = "{active:$ctrl.isSelected(1)}">
-				<a href ng-click="$ctrl.selectTab(1)">48 meses</a>
-			</li>
-			<li class="py" ng-class = "{active:$ctrl.isSelected(2)}">
-				<a href ng-click="$ctrl.selectTab(2)">60 meses</a>
-			</li>
 
 			
+<div class="container">
 
 
-		</ul>
+		<div class="row">
+		  <div class="col-xs-12 col-sm-6 col-md-8">
+
+		    <div class="d-img">
+		    	  <h1 class="py">Wolkswaguen - Beatle</h1>
+		    <!--   <img class="img-responsive" ng-src="{{$ctrl.data.img}}" > -->
+		      <img  width="400px" src="http://pngimg.com/upload/volkswagen_PNG1794.png" >
+
+		      <div class="caption">
+		        <h3 class="py">{{$ctrl.data.nombre}}</h3>
+		        <p>{{$ctrl.data.desc}}</p>
+		        
+		      </div>
+		    </div>
+		  </div>
+		   <div class="col-xs-6 col-sm-6 col-md-4">
+		    <div class="d-caja-mens">
+		     
+				<ul class="nav nav-tabs nav-justified" >
+					
+					<li class="py" ng-class = "{active:$ctrl.isSelected(1)}">
+						<a href ng-click="$ctrl.selectTab(1)">48 meses</a>
+					</li>
+					<li class="py" ng-class = "{active:$ctrl.isSelected(2)}">
+						<a href ng-click="$ctrl.selectTab(2)">60 meses</a>
+					</li>
+
+					
+
+
+				</ul>
+					
+					<div class="panel" ng-show="$ctrl.tab===1" >
+						<h2 class="py">48 Mensualidades de:</h2>
+						<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1>
+						<hr>
+						<h2 class="py">Enganche de:</h2>
+						<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
+						<hr>
+						<button ng-click="$ctrl.guardaCoche(48)" class="btn btn-default btn-lg btn-block">Agrega al Garage</button>
+
+
+					</div>
+					<div class="panel" ng-show="$ctrl.isSelected(2)">
+						<h2 class="py">60 Mensualidades de:</h2>
+						<h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1>
+						<hr>
+						<h2 class="py">Enganche de:</h2>
+						<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
+						<hr>
+						<button ng-click="$ctrl.guardaCoche(60)" class="btn btn-default btn-lg btn-block">Agrega al Garage</button>
+					</div>
+					
 			
-			<div class="panel" ng-show="$ctrl.tab===1">
-				<h2 class="py">48 Mensualidades de:</h2>
-				<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1>
-				<hr>
-				<h2 class="py">Enganche de:</h2>
-				<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
-				<hr>
-				<button ng-click="$ctrl.guardaCoche(48)" class="btn btn-default btn-lg btn-block">Agrega al Garage</button>
+		    </div>
+		  </div>
+		</div>
 
-
-			</div>
-			<div class="panel" ng-show="$ctrl.isSelected(2)">
-				<h2 class="py">60 Mensualidades de:</h2>
-				<h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1>
-				<hr>
-				<h2 class="py">Enganche de:</h2>
-				<h1 class="py">{{$ctrl.feeCar() | currency}}</h1>
-				<hr>
-				<button ng-click="$ctrl.guardaCoche(60)" class="btn btn-default btn-lg btn-block">Agrega al Garage</button>
-			</div>
-			
 	
-    </div>
-  </div>
+
+
 </div>
 
 
