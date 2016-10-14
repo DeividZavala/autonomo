@@ -4,44 +4,75 @@
 	z-index: 2;
 	background-color:black;
 	width: 100%;
-	height: 64px;
+	height: 60px;
 	color:white;
 }
 .nava .logo{
 	font-size: 3rem;
 }
 .nava .logo{
-	margin-left: 50px;
+	margin-left: 20px;
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 5px;
 }
-.nava .right .como_funciona{
+
+.navbar {
+	border-radius: 0px;
+	border-color: black;
+}
+/*.nava .right .como_funciona{
 	background: none !important;
 	border: 1px solid white !important;
 
 }
+*/
 
 .nava .right .btn-circle{
 	background: none !important;
 	border: 1px solid white !important;
-	border-radius: 40px;
+	border-radius: 50px;
 	color:#fff;
 }
-.nava ul li, .nava ul, .nava h2{
+/*.nava ul li, .nava ul, .nava h2{
 	display: inline-block;
+}*/
+
+/*.right{
+	display: none;
 }
+*/
+.rigthh{
+	display:none;
+} 
+/*@media (min-width:800px ){
 	.right{
-		display: none;
-	} 
-@media(min-width: 600px){
+		display: inline-block;
+		float: right;
+		padding-top: 5px;
+		margin-right: 0px;
+		padding-right: 20px;
+	}
+
+}
+	
+
+@media (max-width: 799px){	
+	.rigthh {
+		display: inline-block;
+		float: right;
+		padding-top: 15px;
+		margin-right: 0px;
+		padding-right: 20px;
+		font-size: 2em;
+	}
 
 	.right{
-	display: inline-block;
-	float: right;
-	margin-top: 10px;
-	margin-right: 15px;
-}
-}
+
+	}
+	
+}*/
+	
+
 .white{
 	background: white;
 	color:black;
