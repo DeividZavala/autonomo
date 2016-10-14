@@ -17,8 +17,9 @@ div.container-d-caja-mens{
 
 	div.container-d-caja-mens{
 		position:fixed;
-		right: 20px;
-		top: 80px;
+		right: 30px;
+		top: 100px;
+		max-width: 400px;
 		background-color: rgba(0,0,0,0.8);
 	}
 
@@ -55,6 +56,14 @@ div.d-caja-mens .panel{
 	
 .py{
 	padding-left: 10px;	
+}
+h3.py{
+
+	color:#fff;
+}
+h2.py{
+
+	color:#fff;
 }
 .pya{
 
