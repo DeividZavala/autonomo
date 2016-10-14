@@ -22,7 +22,7 @@
 .navbar {
 	border-radius: 0px;
 	border-color: black;
-	
+
 }
 /*.nava .right .como_funciona{
 	background: none !important;
@@ -91,7 +91,7 @@
 	border: 1px solid white;
 }
 
-.btn:focus{
+.btn:focu	s{
 	background: black;
 	color:white;
 	border: 1px solid white;
