@@ -1,0 +1,91 @@
+div.d-img{
+
+	width: 100%;
+	height: 400px;
+	align:center;
+
+}
+
+
+div.container-d-caja-mens{
+
+
+	background-color: rgba(0,0,0,0.8);
+}
+
+@media (min-width: 1024px){
+
+	div.container-d-caja-mens{
+		position:fixed;
+		right: 30px;
+		top: 100px;
+		max-width: 400px;
+		background-color: rgba(0,0,0,0.8);
+	}
+
+
+
+
+}
+
+
+
+div.d-caja-mens{
+
+	color:#fff;
+	
+	
+	width: 100%;
+
+	top:90px;	
+
+}
+
+div.d-caja-mens .panel{
+
+	background: transparent;
+
+}
+
+.payment{
+		list-style: none;
+		
+		background-color: white;
+		border-color: white;
+	}
+	
+.py{
+	padding-left: 10px;	
+}
+h3.py{
+
+	color:#fff;
+}
+h2.py{
+
+	color:#fff;
+}
+.pya{
+
+	color:#fff;
+}
+.pya:hover{
+
+	color:#333;
+}
+
+
+.nav-tabs > li.active > a.pya, .nav-tabs > li.active > a.pya:hover, .nav-tabs > li.active > a.pya:focus{
+
+
+	color: #fff;
+    cursor: pointer;
+    background-color: #b1a9a9;
+    border-color: #b1a9a9 solid 1px;
+}
+
+.nav-tabs.nav-justified > .active > a.pya{
+
+	border-bottom-color: #b1a9a9;
+}
+

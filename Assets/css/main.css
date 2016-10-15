@@ -8,8 +8,9 @@
 @import "_owl_carousel.css";
 @import "_owl_transitions.css";
 @import "_rotating_card.css";
+@import "_mensualidades.css";
 
 body {
 
-	margin-top: 60px;
+	margin-top: 80px;
 }

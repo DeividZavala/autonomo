@@ -1,4 +1,3 @@
-<div class="">
 <nav class="navbar navbar-default nava" role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
@@ -19,9 +18,9 @@
  
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
        otro elemento que se pueda ocultar al minimizar la barra -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse right">
+  <div  class="collapse navbar-collapse navbar-ex1-collapse right navaback" style="padding-right: 30px">
     <ul class="nav navbar-nav navbar-right">
-      <li>
+      <li style="">
       <a href="#">
       <button type="button" class="btn btn-primary btn-lg btn-circle" data-toggle="modal" data-target="#myModal">
             ¿Como funciona?
@@ -29,24 +28,26 @@
        </a>
        </li>
       <li>
-        <a href="#/cotizacion" class="btn btn-primary white btn-circle">Cotiza tu auto</a>
+        <a href="#/cotizacion">
+          <button type="button" class="btn btn-primary btn-lg btn-circle">
+            Cotiza Tu Auto
+          </button>
+        </a>
       </li>
-      <li>
-        <span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">
+      <li style="padding-left: 5px;">
+          <span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">
             Iniciar Sesión
           </span>
-          <a href="#/perfil">
+          <span style="cursor:pointer; class" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">
+            <a href="#/perfil">
             <img ng-show="$ctrl.user" style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
-          </a>
-          <span style="cursor:pointer;" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">
+            </a>
             Cerrar Sesión
           </span>
       </li>
     </ul>
   </div>
 </nav>
-</div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
