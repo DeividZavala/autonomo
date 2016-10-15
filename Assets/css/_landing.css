@@ -147,7 +147,7 @@ section.l-slider{
 
 .slider3{
 
-  background: url('/Assets/img/index_backgroud_3.jpg');
+  background: url('/Assets/img/autito.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -156,4 +156,25 @@ section.l-slider{
 
   font-weight: 900;
   font-size: 4em;
+}
+/*clases del slida*/
+
+.tittle{
+  font-family: 'Comfortaa', cursive;
+
+}
+.textin{
+  font-family: 'Poiret One', cursive;
+}
+
+.cotizador{
+  font-family: 'Myriad pro';
+}
+
+.detalles{
+  margin-top:2%;
+}
+
+.pasos{
+  font-family: 'Dosis', sans-serif;
 }
