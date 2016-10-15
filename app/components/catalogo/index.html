@@ -24,9 +24,9 @@
 <br>
 <br>
 
-<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
+<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true >
 
-
+<!-- 
 <div class="col-md-12" ng-repeat="producto in $ctrl.data">
 
 
@@ -46,7 +46,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil de trabajo"</h5>
@@ -64,34 +64,78 @@
                                      </div>
                                  </div>
                            
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container                     
+
+        </div> -->
+
+   
+
+
+</slick>
+
+
+<div  class="col-md-12 slid" >
+
+
+                    <div class="card-container">
+                         <div class="card">
+                             <div class="front">
+                                 <div class="cover" style="background-image:url('http://pngimg.com/upload/volkswagen_PNG1794.png')">
+                                     
+                                 </div>
+                                 
+                                 <div class="content">
+                                     <div class="main">
+                                         <h3 class="name">Beatle</h3>
+                                         <p class="profession">Wolkswagen</p>
+
+                                         
+                                     </div>
+                                     
+                                 </div>
+                             </div> <!-- end front panel -->
+                             <div class="back">
+                                 <div class="header">
+                                     <h5 class="motto">"Automovil de trabajo"</h5>
+                                 </div>
+                                 <div class="content">
+                                     <div class="main">
+                                         <h4 class="text-center">Descripcion</h4>
+                                         <p class="text-center">Nuevo Volkswagen Beetle 2017, un coche moderno en su interior y exterior. Descubre su diseño impactante y estilo único. ¡Te encantará! </p>
+
+                                         <div class="stats-container">
+                                           
+                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
+                                         </div>
+
+                                     </div>
+                                 </div>
+                           
                              </div> <!-- end back panel -->
                          </div> <!-- end card -->
                      </div> <!-- end card-container -->                     
 
         </div>
 
-</slick>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
 </div>
 
 
+<script type="text/javascript">
+    
+     $(document).ready(function(){
+      $('.slid').slick({
+
+         infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        
+      });
+    });
+</script>
 
 
 
