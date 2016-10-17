@@ -1,10 +1,10 @@
 (function(){
-	let navbar = {
+	var navbar = {
 		templateUrl:'app/components/navbar/index.html',
 		controller:navbarController
 	}
 	function navbarController($firebaseAuth){
-		let self = this;
+		var self = this;
 		self.user = {}
 		self.auth = $firebaseAuth();
 
