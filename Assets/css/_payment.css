@@ -2,3 +2,22 @@
 	padding-top: 8vh;
 	padding-bottom: 8vh;
 }
+
+.text1 {
+	color: #77328D;
+}
+
+.text2 {
+	color: #E9128B;
+}
+
+.tableBack{
+	color: #78328E;
+}
+.tableBack .textcolor {
+	color: white;
+}
+
+.padButon {
+	padding-top: 20px;
+}
