@@ -3,7 +3,7 @@
 		templateUrl:'app/components/perfil/index.html',
 		controller:perfilController
 	}
-	function perfilController($firebaseAuth,Api_service,$firebaseArray,$http){
+	function perfilController($firebaseAuth,Api_service,$firebaseArray,$http,$scope){
 		var self = this;
 
 		self.user = {};
@@ -37,18 +37,22 @@
 			           		user:lista.user
 			           	});
 			           	//pedimos los coches
-			           	$http({
+			          /* 	$http({
 							method: 'GET',
 							url: 'http://54.244.191.132/topten/'+lista.auto
 
 						})
 						.then(function(response){
 							self.toches.push(response.data);
-						});
+						});*/
 			           	//coches 
 			        }); //for ehach
 			        console.log(self.toches);
 			    });
+
+
+
+
 			
 
 
@@ -58,7 +62,7 @@
 		}); //detecta usuer
 
 		Api_service.alls().then(function (response) {
-			self.userCars = response.data
+			self.userCars = response.data;
 		});
 
 		
@@ -68,6 +72,27 @@
 		
 		// Recupera sus coches
 
+
+		/// navegacion submenu perfil de usuario
+
+
+		$scope.TabActual = 1;
+
+		$scope.SetTab = function(tab){
+
+
+				$scope.TabActual = tab;
+				
+		}
+
+		$scope.validTab = function(numTab){
+
+
+			return  $scope.TabActual == numTab;
+
+			$scope.culos = true;
+
+		}
 
 
 	}

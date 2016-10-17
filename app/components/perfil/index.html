@@ -91,6 +91,11 @@
                 <h3>{{$ctrl.user.displayName}}</h3>
                 <hr class="hrPerfil">
                 <strong>{{$ctrl.user.email}}</strong>
+
+
+                    
+
+
             </div>
         </article>
 
@@ -121,72 +126,211 @@
            
 
            <ul class="nav nav-tabs">
-              <li class="active"><a href="/#/perfil/#garage"> <i class="fa fa-car"></i> Mi garage</a></li>
-              <li><a href="/#/perfil/#datosperf"><i class="fa fa-user"></i> Datos del perfil</a></li>
-              <li><a href="javascript:void(0)"><i class="fa fa-dollar"></i> Detalle de pagos</a></li>
-              <li><a href="javascript:void(0)">Historial</a></li>
+              <li ng-class="{active: validTab(1)}"><a ng-click="SetTab(1)" href > <i class="fa fa-car"></i> Mi garage</a></li>
+              <li ng-class="{active: validTab(2)}"><a ng-click="SetTab(2)" href ><i class="fa fa-user"></i> Datos del perfil</a></li>
+              <li ng-class="{active: validTab(3)}"><a ng-click="SetTab(3)" href ><i class="fa fa-dollar"></i> Detalle de pagos</a></li>
+              <li ng-class="{active: validTab(4)}"><a ng-click="SetTab(4)" href >Historial</a></li>
             </ul>
+
             
 
-            <div class="tab-content">
-                  <div id="garage" class="tab-pane fade in active">
+            <div class="tab-content"> 
+
+                    <div ng-show="validTab(1)">
+
+                            <div id="garage" class="tab-pane fade in active">
 
 
 
-                        <div class="panel-group well" id="accordion" role="tablist" aria-multiselectable="true">
-          
-                        <div class="panel panel-default" >
-                            <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="!#/#{{$index+1}}" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none">
-                                <strong>Beatle</strong>
-                                </a>
-                            </h4>
-                            </div>
-                            <div id="{{$index+1}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body row active">
-                                <div class="col-sm-12 col-md-6">
-
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><strong>wolkswaguen</strong></li>
-                                        <li class="list-group-item">120</li>
-                                        <li class="list-group-item"><a href="javascript:void(0)">Más info</a></li>
-                                    </ul>
-
-                                </div>
-                                <figure class="col-sm-12 col-md-6">
-                                    <img class="img-responsive" ng-src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="">
-                                </figure>
-                                <h5>  Porcentaje de avance para la solicitud</h5>
-                                <div class="progress col-sm-12 col-md-12" style="margin-top:2%;">
-                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                        60%
+                                <div class="panel-group well" id="accordion" role="tablist" aria-multiselectable="true">
+                  
+                                <div class="panel panel-default" >
+                                    <div class="panel-heading title-car" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="!#/#{{$index+1}}" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none">
+                                        <strong>Beatle</strong>
+                                        </a>
+                                    </h4>
                                     </div>
+                                    <div id="{{$index+1}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body row active">
+                                        <div class="col-sm-12 col-md-6">
+
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><strong>wolkswaguen</strong></li>
+                                                <li class="list-group-item">120</li>
+                                                <li class="list-group-item"><a href="javascript:void(0)">Más info</a></li>
+                                            </ul>
+
+                                        </div>
+                                        <figure class="col-sm-12 col-md-6 text-center">
+                                            <img class="img-responsive" ng-src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="">
+                                            
+                                        </figure>
+                                        <div class="col-md-12 text-center">
+                                            <a class="btn btn-danger " href="/#/detailPayment">Empieza a financiarlo</a>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+
                                 </div>
-                                
-                            </div>
                             </div>
 
+
+
+
+                            
+                          </div>
+                        
+
+                    </div>
+                          
+                  <div  ng-show="validTab(2)" id="datosperf" >
+
+                        <h5>Perfil completado en </h5>
+                    <div class="progress col-sm-12 col-md-12" style="margin-top:2%;">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            60%
                         </div>
                     </div>
+                    <form class="well">
+                        
+                            <div class="form-group">
+                                <label class="line-height">Nombre Completo</label>
+                                <input class="form-control" type="text" placeholder="Nombre">
+                             </div>
+
+                       
+                            <div class="form-group">
+                                <label class="line-height">Fecha de nacimiento</label>
+                                <input class="form-control" type="text" placeholder="Apellidos">
+                            </div>
+
+                             <div class="form-group">
+                                 <label class="line-height">RFC(Con homo clave)</label>
+                                <input class="form-control" type="text" placeholder="Email">
+                            </div>
+
+                             <div class="form-group">
+                                <label class="line-height">CURP</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                              <div class="form-group">
+                                <label class="line-height">Nacionalidad</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Sexo</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Estado Civil</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Telefono</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Sexo</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Correo electronico</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Domicilio</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label class="line-height">Escolaridad</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Ocupacion</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="line-height">Salario</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label class="line-height">Referencias personales</label>
+                                <input class="form-control" type="text" placeholder="telefono">
+                            </div>
+                        
+                            <div class="form-group text-center">
+                                
+                                <a class="btn btn-danger" href="javascript:void(0)">Guardar</a>
+                            </div>
+
+                       
+                    </form>
+                  </div>
+
+                   <div  ng-show="validTab(3)" id="datosperf" >
+                        <div class="well">
 
 
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Ref de transaccion</th>
+                                    <th>Concepto</th>
+                                    <th>Fecha</th>
+                                    <th>Metodo de pago</th>                                    
+                                    <th>Importe</th>
+                                    <th>Status</th>
+
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>4ca36931-1165</td>
+                                    <td>Inscripcion</td>
+                                    <td>14/Oct/2016</td>
+                                    <td>Paypal</td>
+                                    <td>$2000.00</td>
+                                    <td class="btn btn-success text-success">Exitoso</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>7ca34596-4323</td>
+                                    <td>Mensualidad</td>
+                                    <td>14/Oct/2016</td>
+                                    <td>Paypal</td>
+                                    <td>$6400.00</td>
+                                    <td class="btn btn-success text-success">Exitoso</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              </div>
+                            
+                                
+                           
+                        </div>
+                  </div>
+                 
+                </div> <!-- end tab content-->
 
 
                     
-                  </div>
-                  <div id="datosperf" class="tab-pane fade">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Nombre">
-                            <input type="text" placeholder="Apellidos">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="telefono">
-                        </div>
-                    </form>
-                  </div>
-                 
-                </div>
         </article>
 
     </section>
