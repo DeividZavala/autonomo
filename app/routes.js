@@ -70,6 +70,9 @@
               //             } //resolve
             })
 
+            .when('/detailPayment', {
+                template: `<payment-component></payment-component>`
+            })
             .when('/login',{
                 template:`<login-component></login-component>`
             })
