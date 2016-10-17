@@ -5,11 +5,15 @@ html {
 }
 
 .footer {
+  
+  background-color: black;
+}
+.foott{
+
   position: relative;
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: black;
 }
 
 .respfooter {

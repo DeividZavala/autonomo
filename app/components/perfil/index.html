@@ -1,4 +1,4 @@
-<section class="container">
+<!-- <section class="container">
     <section class="perfil row">
     
         <article class="col-sm-12 col-md-4">
@@ -12,7 +12,7 @@
         </article>
 
         <article class="col-sm-12 col-md-8">
-<!-- <<<<<<< HEAD
+
             <div class="panel panel-dark">
                 <div class="panel-heading">
                     <h3 class="panel-title">Tus Autos</h3>
@@ -34,7 +34,7 @@
                             </tr>
                         </tbody>
                     </table>
-======= -->
+
             <h5>Tu garage</h5>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   
@@ -75,4 +75,119 @@
         </article>
 
     </section>
-</section>
+</section>  -->
+
+
+<section class="container">
+    <section class="perfil row">
+    
+        <article class="col-sm-12 col-md-4 text-center">
+        
+            <div class="container_userData">
+             <h2>Mi perfil</h2>
+                <figure class="containder_userImg ">
+                    <img class="img-responsive" ng-src="{{$ctrl.user.photoURL}}" alt="Foto de perfil">
+                </figure>
+                <h3>{{$ctrl.user.displayName}}</h3>
+                <hr class="hrPerfil">
+                <strong>{{$ctrl.user.email}}</strong>
+            </div>
+        </article>
+
+        <article class="col-sm-12 col-md-8">
+
+        <!--     <div class="panel panel-dark">
+            <div class="panel-heading">
+                <h3 class="panel-title">Tus Autos</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del carro</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="car in $ctrl.listaCoches">
+                            <th>{{$index+1}}</th>
+                            <th>{{car.auto}}</th>
+                            <th>{{car.plazo}}</th>
+                        </tr>
+                    </tbody>
+                </table> -->
+
+           
+
+           <ul class="nav nav-tabs">
+              <li class="active"><a href="/#/perfil/#garage"> <i class="fa fa-car"></i> Mi garage</a></li>
+              <li><a href="/#/perfil/#datosperf"><i class="fa fa-user"></i> Datos del perfil</a></li>
+              <li><a href="javascript:void(0)"><i class="fa fa-dollar"></i> Detalle de pagos</a></li>
+              <li><a href="javascript:void(0)">Historial</a></li>
+            </ul>
+            
+
+            <div class="tab-content">
+                  <div id="garage" class="tab-pane fade in active">
+
+
+
+                        <div class="panel-group well" id="accordion" role="tablist" aria-multiselectable="true">
+          
+                        <div class="panel panel-default" >
+                            <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="!#/#{{$index+1}}" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none">
+                                <strong>Beatle</strong>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="{{$index+1}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body row active">
+                                <div class="col-sm-12 col-md-6">
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><strong>wolkswaguen</strong></li>
+                                        <li class="list-group-item">120</li>
+                                        <li class="list-group-item"><a href="javascript:void(0)">Más info</a></li>
+                                    </ul>
+
+                                </div>
+                                <figure class="col-sm-12 col-md-6">
+                                    <img class="img-responsive" ng-src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="">
+                                </figure>
+                                <h5>  Porcentaje de avance para la solicitud</h5>
+                                <div class="progress col-sm-12 col-md-12" style="margin-top:2%;">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        60%
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                    
+                  </div>
+                  <div id="datosperf" class="tab-pane fade">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre">
+                            <input type="text" placeholder="Apellidos">
+                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="telefono">
+                        </div>
+                    </form>
+                  </div>
+                 
+                </div>
+        </article>
+
+    </section>
+</section> 
