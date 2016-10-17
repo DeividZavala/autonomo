@@ -1,0 +1,10 @@
+.sub-menu-perfil li{
+
+	display: inline-block;
+}
+hr.hrPerfil{
+
+	width: 100px;
+	
+	border-top: solid #a8a2ae 2px;
+}

@@ -1,5 +1,5 @@
 (function(){
-	let car = {
+	var car = {
 		controller: CarController,
 		templateUrl: 'app/components/mensualidades/mensualidad.html'
 	}
@@ -7,8 +7,8 @@
 
 	CarController.$inject=['$routeParams','$http','$firebaseAuth','$firebaseArray'];
 	function CarController($routeParams,$http,$firebaseAuth,$firebaseArray){
-		let cars = this;
-		let self = this;
+		var cars = this;
+		var self = this;
 		cars.tab=2;
 		cars.auto = $routeParams.id;
 		console.log(cars.auto);

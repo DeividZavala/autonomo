@@ -1,10 +1,10 @@
 (function(){
-	let perfil = {
+	var perfil = {
 		templateUrl:'app/components/perfil/index.html',
 		controller:perfilController
 	}
 	function perfilController($firebaseAuth,Api_service,$firebaseArray,$http){
-		let self = this;
+		var self = this;
 
 		self.user = {};
 		self.listaCoches = [];

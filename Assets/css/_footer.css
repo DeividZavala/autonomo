@@ -5,24 +5,60 @@ html {
 }
 
 .footer {
+  
+  background-color: black;
+}
+.foott{
+
   position: relative;
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: black;
 }
 
 .respfooter {
   padding: 2%;
 }
 
-.img-footer{
+.img-footer img{
 	max-width: 150px;
+  float: right;
 }
 .social_icon {
 	max-width: 50px;	
 }
 
-.foott {
-  margin:80% 0% 0% 0% ;
+
+.fgIcons{
+
+  text-align: center;
+  border-top: solid 2px #0e0e0f;
+  padding-top: 25px;
 }
+.fgIcons li{
+
+  text-align:center;
+
+  display: inline;
+}
+
+.fgIcons img{
+      padding-right: 7px;
+      width: 40px;
+}
+
+.iFace img:hover,.iTwitt img:hover,.iGmail img:hover{
+
+  transition: 0.6s;
+  width: 50px;
+
+}
+
+.text-footer{
+  padding-top: 25px;
+}
+
+
+
+
+

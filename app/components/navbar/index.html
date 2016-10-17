@@ -34,11 +34,11 @@
           </button>
         </a>
       </li>
-      <li style="padding-left: 5px;">
+      <li class="liss">
           <span style="cursor:pointer;" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">
             Iniciar Sesión
           </span>
-          <span style="cursor:pointer; class" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">
+          <span style="cursor:pointer; margin-top: 10px" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">
             <a href="#/perfil">
             <img ng-show="$ctrl.user" style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
             </a>

@@ -1,10 +1,10 @@
 (function(){
-	let about = {
+	var about = {
 		templateUrl:'app/components/about/index.html',
 		controller:aboutController
 	}
 	function aboutController(){
-		let self = this;
+		var self = this;
 	}
 	angular
 		.module('autonomo')
