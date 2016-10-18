@@ -56,7 +56,7 @@
 						<h4 class="text3"><strong>Estás más cerca de estrenar tu</strong></h4>
 						<h3 class="text3"><strong>¡AUTO!</strong></h3>
 						<img src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="Wolkswaguen - Beatle" width="70%">
-						<h3><strong>Wolkswaguen - Beatleee</strong></h3>
+						<h3><strong>Volkswagen - Beatleee</strong></h3>
 					</div>
 				</div>
 			</div><!--row-->
@@ -76,9 +76,91 @@
 						Selecciona tu forma de pago
 					</h4>
 				</div>
+
 				<div class="modal-body">
-					Aqui va el contenido
+
+					
+					<!-- Acordion -->
+					<div class="panel-group" id="accord" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+
+							<div class="panel-heading" role="tab" id="headingUno">
+								<h4 class="panel-title">
+									<div ng-class="validTab(1)">
+									<a ng-click="SetTab(1)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseUno">
+										Tarjeta de crédito
+										<!--href="#collapseUno"-->
+									</a>
+									</div>
+								</h4>
+							</div>
+							<div ng-show="validTab(1)">
+							<div id="collapseUno" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingUno">
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+							</div>
+
+							<div class="panel-heading" role="tab" id="headingDos">
+								<h4 class="panel-title">
+									<div ng-class="validTab(2)">
+									<a ng-click="SetTab(2)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseDos">
+										Tarjeta de crédito
+										<!--href="#collapseUno"-->
+									</a>
+									</div>
+								</h4>
+							</div>
+							<div ng-show="validTab(2)">
+							<div id="collapseDos" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingDos">
+								<div class="panel-body">
+									Hugo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+							</div>
+
+							<div class="panel-heading" role="tab" id="headingTres">
+								<h4 class="panel-title">
+									<div ng-class="validTab(3)">
+									<a ng-click="SetTab(3)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseTres">
+										Tarjeta de crédito
+										<!--href="#collapseUno"-->
+									</a>
+									</div>
+								</h4>
+							</div>
+							<div ng-show="validTab(3)">
+							<div id="collapseTres" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingTres">
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+							</div>
+
+						</div>
+					</div>
+
+
+
+
 				</div>
+
 				<div class="modal-footer">
 					Pie de modal
 				</div>
