@@ -42,7 +42,9 @@
 								<br>
 								<br>
 								<div class="col-xs-12 col-md-12 col-lg-12 padButon" align="center">
-									<button class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="¡Ya falta poco!">REALIZAR PAGO <span class="glyphicon glyphicon-piggy-bank"></span</button>
+									<button  type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-placement="top" title="¡Ya falta poco!" data-target="#paymentModal">
+										REALIZAR PAGO <span class="glyphicon glyphicon-piggy-bank"></span>
+									</button>
 								</div><!--col-xs-md-lg-->
 								</div>
 							</div><!--col-xs-md-lg-->
@@ -54,11 +56,37 @@
 						<h4 class="text3"><strong>Estás más cerca de estrenar tu</strong></h4>
 						<h3 class="text3"><strong>¡AUTO!</strong></h3>
 						<img src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="Wolkswaguen - Beatle" width="70%">
-						<h3><strong>Wolkswaguen - Beatle</strong></h3>
+						<h3><strong>Wolkswaguen - Beatleee</strong></h3>
 					</div>
 				</div>
 			</div><!--row-->
 			</div>
 		</div><!--container-->
 	</div><!--paymentPosition-->
+
+	<!--Modal-->
+	<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabell">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabell">
+						Selecciona tu forma de pago
+					</h4>
+				</div>
+				<div class="modal-body">
+					Aqui va el contenido
+				</div>
+				<div class="modal-footer">
+					Pie de modal
+				</div>
+			</div>
+		</div>
+	</div>
+
 </section> <!--Seccion-->
+
+
+
