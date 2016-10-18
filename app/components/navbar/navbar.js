@@ -11,30 +11,35 @@
 		self.auth.$onAuthStateChanged(function(user) {
 		  if (user) {
 		    self.user = {
-			  	id:user.uid,
-			  	displayName:user.displayName,
-			  	email:user.email,
-			  	photoURL:user.photoURL
+						  	id:user.uid,
+						  	displayName:user.displayName,
+						  	email:user.email,
+						  	photoURL:user.photoURL
 		  }
+
+		  	 console.log("loged");
 		  } else {
+		  	self.user = false;
 		    console.log("Signed out");
 		  }
 		});
 
 		self.logIn = function(){
-		self.auth.$signInWithPopup("google").then(function(result) {
-		  console.log("Signed in as:", result.user.uid);
-		  self.user = {
-		  	id:result.user.uid,
-		  	displayName:result.user.displayName,
-		  	email:result.user.email,
-		  	photoURL:result.user.photoURL
-		  }
-		}).catch(function(error) {
-		  console.error("Authentication failed:", error);
-		  self.user = false;
-		});
-		return self.user;
+				self.auth.$signInWithPopup("google").then(function(result) {
+
+				  		    console.log("Signed in as:", result.user.uid);
+						    self.user = {
+										  	id:result.user.uid,
+										  	displayName:result.user.displayName,
+										  	email:result.user.email,
+										  	photoURL:result.user.photoURL
+						  }
+
+				}).catch(function(error) {
+				  console.error("Error de Authentication :", error);
+				  self.user = false;
+				});
+				return self.user;
 
 	} //fin login
 
