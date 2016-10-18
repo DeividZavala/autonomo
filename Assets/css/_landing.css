@@ -37,21 +37,7 @@ section.l-slider{
 }
 
 
-/* MARKETING CONTENT
--------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
 
 
 /* Featurettes
@@ -119,14 +105,14 @@ section.l-slider{
 
 .lbtn-white{
 
-      color: #fff;
+    color: #fff;
     background-color: rgba(255,255,255,.5);
     border-color: #fff;
 }
 
 .lbtn-white:hover, .lbtn-white:active{
 
-      color: #fdfdfd;
+    color: #fdfdfd;
     background-color: rgba(255,255,255,.3) !important;
     border-color: #fff;
 }
@@ -183,17 +169,20 @@ section.l-slider{
 .detalles{
   margin-top:2%;
 }
-.paso{
+
+/* Estan canceladas porque en resolucion md afectan al GRID de bootstrap  */
+
+/* .paso{
   font-family: 'Varela Round', sans-serif;
 }
 .pasos{
   font-family: 'Exo', sans-serif;
-  font-size:20px;
+  
 }
 .pasito{
     font-family: 'Myriad pro';
-    font-size:130%;
-}
+    
+} */
 .icon:hover{
   color:transparent;
 }
@@ -202,11 +191,11 @@ section.l-slider{
   transition:1s ease;
 }
 .promo{
-  margin-top:10%;
+ 
   font-family: 'Comfortaa', cursive;
 }
 .cliente{
-  width:200px;
+  widows: 80px;
   border-radius:50%;
 }
 .exitos{
