@@ -40,7 +40,7 @@
 			          /* 	$http({
 							method: 'GET',
 							url: 'http://54.244.191.132/topten/'+lista.auto
-
+	
 						})
 						.then(function(response){
 							self.toches.push(response.data);
@@ -80,7 +80,6 @@
 
 		$scope.SetTab = function(tab){
 
-
 				$scope.TabActual = tab;
 				
 		}
@@ -90,7 +89,7 @@
 
 			return  $scope.TabActual == numTab;
 
-			$scope.culos = true;
+			/*$scope.culos = true;*/
 
 		}
 
