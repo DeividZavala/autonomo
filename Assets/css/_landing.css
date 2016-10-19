@@ -19,7 +19,7 @@ section.l-slider{
 .carousel-caption {
   z-index: 10;
   position:absolute;
-  top:50%;
+  top:40%;
   transform: translateY(-50%);
 }
 
@@ -78,11 +78,6 @@ section.l-slider{
   }
 
   /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
 
   .featurette-heading {
     font-size: 100px;
@@ -90,13 +85,42 @@ section.l-slider{
 
 }
 
+
+  .sectionFormat{
+
+display:block;
+
+}
+
+
+
+
+
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
   .sectionFormat{
- 
-  height: 100vh;
+
+      display:block;
+      height:100vh;
+      position: relative;
+      top:0;
+      bottom:0;
+      width: 100%;
+  }
+
+  .vertical-align{
+
+    vertical-align: middle;
+width:100%;
+    display: inline-block;
+    height:50%;
+    position: absolute;
+    top: 0;
+    bottom:0%;
+    margin: auto;
+
 }
 }
 
@@ -151,16 +175,71 @@ section.l-slider{
   font-size:70px;
 
 }
-@media (max-width: 600px) {
-  .tittle{
-    font-size:30px;
-  }
 
-}
 .textin{
   font-family: 'Poiret One', cursive;
   text-align:center;
 }
+
+
+@media (min-width: 1200px) {
+  .tittle{
+    font-size:85px;
+  }
+
+.textin{
+  font-size: 35px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .tittle{
+    font-size:200px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .tittle{
+    font-size:80px;
+  }
+
+  .textin{
+  font-size: 50px;
+}
+
+}
+
+@media (max-width: 992px) {
+  .tittle{
+    font-size:50px;
+  }
+
+
+  .textin{
+  font-size: 30px;
+}
+
+}
+
+@media (max-width: 768px) {
+  .tittle{
+    font-size:40px;
+  }
+
+  .textin{
+  font-size: 20px;
+}
+
+
+}
+
+
+
+
+
+
 
 .cotizador{
   font-family: 'Myriad pro';
@@ -200,10 +279,11 @@ section.l-slider{
 }
 .exitos{
   display:block;
-  height:400px;
+  height:200px;
   text-align:center;
   border-radius:15px;
-  box-shadow:2px 2px 2px #eceff1;
-
+ 
+}
 /*Termina comentarios*/
+
 
