@@ -87,22 +87,85 @@
 							<div class="panel-heading" role="tab" id="headingUno">
 								<h4 class="panel-title">
 									<div ng-class="validTab(1)">
-									<a ng-click="SetTab(1)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseUno">
-										Tarjeta de crédito
-										<!--href="#collapseUno"-->
-									</a>
+										<a ng-click="SetTab(1)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseUno">
+											<h3>
+												<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+												Tarjeta de Crédito
+												<!--href="#collapseUno"-->
+												<i class="fa fa-cc-visa" aria-hidden="true"></i>
+												<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
+												<i class="fa fa-cc-amex" aria-hidden="true"></i>
+											</h3>
+										</a>
 									</div>
 								</h4>
 							</div>
+
 							<div ng-show="validTab(1)">
 							<div id="collapseUno" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingUno">
 								<div class="panel-body">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									<form role="form">
+										<div class="form-group">
+											<div class="col-lg-6">
+												<input type="text" class="form-control" placeholder="Nombre"></input>	
+											</div>
+											<div class="col-lg-6">
+												<input type="text" class="form-control" placeholder="Apellido"></input>
+											</div>
+										</div>
+										<br> <br> <br>
+										<div class="form-group">
+											<div class="col-lg-12">
+												<input type="number" class="form-control" placeholder="Número de tarjeta"></input>
+											</div>
+										</div>
+										<br> <br>
+										<div class="form-group">
+											<div class="col-lg-6">
+												<select class="form-control">
+													<option>Mes de vencimiento</option>
+													<option value="">Ene (01)</option>
+													<option value="">Feb (02)</option>
+													<option value="">Mar (03)</option>
+													<option value="">Abr (04)</option>
+													<option value="">May (05)</option>
+													<option value="">Jun (06)</option>
+													<option value="">Jul (07)</option>
+													<option value="">Ago (08)</option>
+													<option value="">Sep (09)</option>
+													<option value="">Oct (10)</option>
+													<option value="">Nov (11)</option>
+													<option value="">Dic (12)</option>
+												</select>
+											</div>
+											<div class="col-lg-6">
+												<select class="form-control" placeholder="Año de vencimiento">
+													<option value="">Año de vencimiento</option>
+													<option value="16">2016</option>
+													<option value="17">2017</option>
+													<option value="18">2018</option>
+													<option value="19">2019</option>
+													<option value="20">2020</option>
+													<option value="21">2021</option>
+													<option value="22">2022</option>
+													<option value="23">2023</option>
+													<option value="24">2024</option>
+													<option value="25">2025</option>
+													<option value="26">2026</option>
+													<option value="27">2027</option>
+													<option value="28">2028</option>
+													<option value="29">2029</option>
+													<option value="30">2030</option>
+												</select>
+											</div>
+										</div>
+										<br> <br>
+										<div class="form-group">
+											<div class="col-lg-12">
+												<input type="number" class="form-control" placeholder="Código de seguridad (CVV)"></input>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
 							</div>
@@ -110,13 +173,20 @@
 							<div class="panel-heading" role="tab" id="headingDos">
 								<h4 class="panel-title">
 									<div ng-class="validTab(2)">
-									<a ng-click="SetTab(2)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseDos">
-										Tarjeta de crédito
-										<!--href="#collapseUno"-->
-									</a>
+										<a ng-click="SetTab(2)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseDos">
+											<h3>
+												<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+												Tarjeta de Débito
+												<!--href="#collapseUno"-->
+												<i class="fa fa-cc-visa" aria-hidden="true"></i>
+												<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
+												<i class="fa fa-cc-amex" aria-hidden="true"></i>
+											</h3>
+										</a>
 									</div>
 								</h4>
 							</div>
+							
 							<div ng-show="validTab(2)">
 							<div id="collapseDos" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingDos">
 								<div class="panel-body">
@@ -133,10 +203,10 @@
 							<div class="panel-heading" role="tab" id="headingTres">
 								<h4 class="panel-title">
 									<div ng-class="validTab(3)">
-									<a ng-click="SetTab(3)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseTres">
-										Tarjeta de crédito
-										<!--href="#collapseUno"-->
-									</a>
+										<a ng-click="SetTab(3)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseTres">
+											Tarjeta de crédito
+											<!--href="#collapseUno"-->
+										</a>
 									</div>
 								</h4>
 							</div>
