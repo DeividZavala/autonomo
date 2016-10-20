@@ -4,7 +4,10 @@
 		controller: paymentController
 	}
 
-	function paymentController($scope){
+	function paymentController($scope, $http){
+		var self = this;
+		self.data = [];
+
 		console.log("Hola");
 
 		$scope.collapseNow = 1;
@@ -21,7 +24,34 @@
 			return  $scope.collapseNow == numColl;
 
 		}
+
+		/*self.func = function(){
+
+
+		
+		}
+
+		self.func();*/
+		$http({
+			method: 'GET',
+			url: 'http://localhost:8000/autos.json',
+
+		}) .then(function successCallback(response){
+			self.data = response.data;
+
+			console.log(self.data.autos[1]);
+			}, function errorCallback(response){
+			console.log(response);
+		});
+
+		console.log("sdfghjk,l");
+		console.log(self.data);
+
+
+
 	}
+
+
 
 	angular
 		.module('autonomo')

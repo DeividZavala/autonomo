@@ -2,64 +2,64 @@
 	<div class="paymentPosition">
 
 		<div class="container-fluid">
-		<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1">
-			<div class="row">
-				<div class="col-xs-12 col-md-6 col-lg-6">
-					<div class="panel panel-default">
-						<div class="tablee">
-							<div class="panel-heading" align="center">
-								<h3>
-									<span style="color: green;" class="glyphicon glyphicon-ok"></span>
-									Financiamiento
-								</h3>
-							</div><!--panel-heading-->
+			<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-lg-6">
+						<div class="panel panel-default">
+							<div class="tablee">
+								<div class="panel-heading" align="center">
+									<h3>
+										<span style="color: green;" class="glyphicon glyphicon-ok"></span>
+										Financiamiento
+									</h3>
+								</div><!--panel-heading-->
+							</div>
+							<div class="panel-body">
+								<div class="col-xs-10 col-md-10 col-lg-10 col-xs-offset-1 col-md-offset-1 col-lg-offset-1">
+									<div align="left">
+										<div class="table-responsive">
+											<table class="table table-striped">
+												<tr>
+													<th><h5>#</h5></th>
+													<th><h5>Concepto</h5></th>
+													<th><h5>Precio</h5></th>
+												</tr>
+												<tr>
+													<td><h6>1</h6></td>
+													<td><h6>Cuota de Inscripción</h6></td>
+													<td><h6>$2,969.00</h6></td>
+												</tr>
+												<tr>
+													<td><h6>2</h6></td>
+													<td><h6>Primer Mensualidad</h6></td>
+													<td><h6>$5,376.42</h6></td>
+												</tr>
+											</table>
+										</div><!--table-responsive-->
+										<div class="col-xs-12 col-md-12 col-lg-12">
+											<h3 align="right" class="text2">TOTAL <span class="glyphicon glyphicon-usd"></span>8,345.42</h3>
+										</div><!--col-xs-md-lg-->
+										<br>
+										<br>
+										<div class="col-xs-12 col-md-12 col-lg-12 padButon" align="center">
+											<button  type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-placement="top" title="¡Ya falta poco!" data-target="#paymentModal">
+												REALIZAR PAGO <span class="glyphicon glyphicon-piggy-bank"></span>
+											</button>
+										</div><!--col-xs-md-lg-->
+									</div>
+								</div><!--col-xs-md-lg-->
+							</div><!--panel-body-->
+						</div><!--panel-->
+					</div><!--col-xs-md-lg-->
+					<div class="col-xs-12 col-md-6 col-lg-6">
+						<div class="text1" align="center">
+							<h4 class="text3"><strong>Estás más cerca de estrenar tu</strong></h4>
+							<h3 class="text3"><strong>¡AUTO!</strong></h3>
+							<img src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="Wolkswaguen - Beatle" width="70%">
+							<h3><strong>Volkswagen - Beatleee</strong></h3>
 						</div>
-						<div class="panel-body">
-							<div class="col-xs-10 col-md-10 col-lg-10 col-xs-offset-1 col-md-offset-1 col-lg-offset-1">
-								<div align="left">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><h5>#</h5></th>
-											<th><h5>Concepto</h5></th>
-											<th><h5>Precio</h5></th>
-										</tr>
-										<tr>
-											<td><h6>1</h6></td>
-											<td><h6>Cuota de Inscripción</h6></td>
-											<td><h6>$2,969.00</h6></td>
-										</tr>
-										<tr>
-											<td><h6>2</h6></td>
-											<td><h6>Primer Mensualidad</h6></td>
-											<td><h6>$5,376.42</h6></td>
-										</tr>
-									</table>
-								</div><!--table-responsive-->
-								<div class="col-xs-12 col-md-12 col-lg-12">
-									<h3 align="right" class="text2">TOTAL <span class="glyphicon glyphicon-usd"></span>8,345.42</h3>
-								</div><!--col-xs-md-lg-->
-								<br>
-								<br>
-								<div class="col-xs-12 col-md-12 col-lg-12 padButon" align="center">
-									<button  type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-placement="top" title="¡Ya falta poco!" data-target="#paymentModal">
-										REALIZAR PAGO <span class="glyphicon glyphicon-piggy-bank"></span>
-									</button>
-								</div><!--col-xs-md-lg-->
-								</div>
-							</div><!--col-xs-md-lg-->
-						</div><!--panel-body-->
-					</div><!--panel-->
-				</div><!--col-xs-md-lg-->
-				<div class="col-xs-12 col-md-6 col-lg-6">
-					<div class="text1" align="center">
-						<h4 class="text3"><strong>Estás más cerca de estrenar tu</strong></h4>
-						<h3 class="text3"><strong>¡AUTO!</strong></h3>
-						<img src="http://pngimg.com/upload/volkswagen_PNG1794.png" alt="Wolkswaguen - Beatle" width="70%">
-						<h3><strong>Volkswagen - Beatleee</strong></h3>
 					</div>
-				</div>
-			</div><!--row-->
+				</div><!--row-->
 			</div>
 		</div><!--container-->
 	</div><!--paymentPosition-->
@@ -88,21 +88,119 @@
 								<h4 class="panel-title">
 									<div ng-class="validTab(1)">
 										<a ng-click="SetTab(1)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseUno">
-											<h3>
-												<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-												Tarjeta de Crédito
+											<div class="container-fluid">												
+												<h3>
+												<div class="col-lg-7" align="left">
+													<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+													Tarjeta de Crédito
+												</div>
 												<!--href="#collapseUno"-->
-												<i class="fa fa-cc-visa" aria-hidden="true"></i>
-												<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
-												<i class="fa fa-cc-amex" aria-hidden="true"></i>
-											</h3>
+												<div class="col-lg-5" align="left">
+													<i class="fa fa-cc-visa" aria-hidden="true"></i>
+													<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
+													<i class="fa fa-cc-amex" aria-hidden="true"></i>
+												</div>
+												</h3>
+											</div>
 										</a>
 									</div>
 								</h4>
 							</div>
 
 							<div ng-show="validTab(1)">
-							<div id="collapseUno" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingUno">
+								<div id="collapseUno" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingUno">
+									<div class="panel-body">
+										<form role="form">
+											<div class="form-group">
+												<div class="col-lg-6">
+													<input type="text" class="form-control" placeholder="Nombre">	
+												</div>
+												<div class="col-lg-6">
+													<input type="text" class="form-control" placeholder="Apellido">
+												</div>
+											</div>
+											<br> <br> <br>
+											<div class="form-group">
+												<div class="col-lg-12">
+													<input type="number" class="form-control">
+												</div>
+											</div>
+											<br> <br>
+											<div class="form-group">
+												<div class="col-lg-6">
+													<select class="form-control">
+														<option value="">Mes de vencimiento</option>
+														<option value="01">Ene (01)</option>
+														<option value="02">Feb (02)</option>
+														<option value="03">Mar (03)</option>
+														<option value="04">Abr (04)</option>
+														<option value="05">May (05)</option>
+														<option value="06">Jun (06)</option>
+														<option value="07">Jul (07)</option>
+														<option value="08">Ago (08)</option>
+														<option value="09">Sep (09)</option>
+														<option value="10">Oct (10)</option>
+														<option value="11">Nov (11)</option>
+														<option value="12">Dic (12)</option>
+													</select>
+												</div>
+												<div class="col-lg-6">
+													<select class="form-control">
+														<option value="">Año de vencimiento</option>
+														<option value="16">2016</option>
+														<option value="17">2017</option>
+														<option value="18">2018</option>
+														<option value="19">2019</option>
+														<option value="20">2020</option>
+														<option value="21">2021</option>
+														<option value="22">2022</option>
+														<option value="23">2023</option>
+														<option value="24">2024</option>
+														<option value="25">2025</option>
+														<option value="26">2026</option>
+														<option value="27">2027</option>
+														<option value="28">2028</option>
+														<option value="29">2029</option>
+														<option value="30">2030</option>
+													</select>
+												</div>
+											</div>
+											<br> <br>
+											<div class="form-group">
+												<div class="col-lg-12">
+													<input type="number" class="form-control" placeholder="Código de seguridad (CVV)">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-heading" role="tab" id="headingDos">
+								<h4 class="panel-title">
+									<div ng-class="validTab(2)">
+										<a ng-click="SetTab(2)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseDos">
+											<div class="container-fluid">												
+												<h3>
+												<div class="col-lg-7" align="left">
+													<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+													Tarjeta de Dédito
+												</div>
+												<!--href="#collapseUno"-->
+												<div class="col-lg-5" align="left">
+													<i class="fa fa-cc-visa" aria-hidden="true"></i>
+													<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
+													<i class="fa fa-cc-amex" aria-hidden="true"></i>
+												</div>
+												</h3>
+											</div>
+										</a>
+									</div>
+								</h4>
+							</div>
+
+							<div ng-show="validTab(2)">
+							<div id="collapseDos" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingDos">
 								<div class="panel-body">
 									<form role="form">
 										<div class="form-group">
@@ -116,30 +214,30 @@
 										<br> <br> <br>
 										<div class="form-group">
 											<div class="col-lg-12">
-												<input type="number" class="form-control" placeholder="Número de tarjeta">
+												<input type="number" class="form-control">
 											</div>
 										</div>
 										<br> <br>
 										<div class="form-group">
 											<div class="col-lg-6">
 												<select class="form-control">
-													<option>Mes de vencimiento</option>
-													<option value="">Ene (01)</option>
-													<option value="">Feb (02)</option>
-													<option value="">Mar (03)</option>
-													<option value="">Abr (04)</option>
-													<option value="">May (05)</option>
-													<option value="">Jun (06)</option>
-													<option value="">Jul (07)</option>
-													<option value="">Ago (08)</option>
-													<option value="">Sep (09)</option>
-													<option value="">Oct (10)</option>
-													<option value="">Nov (11)</option>
-													<option value="">Dic (12)</option>
+													<option value="">Mes de vencimiento</option>
+													<option value="01">Ene (01)</option>
+													<option value="02">Feb (02)</option>
+													<option value="03">Mar (03)</option>
+													<option value="04">Abr (04)</option>
+													<option value="05">May (05)</option>
+													<option value="06">Jun (06)</option>
+													<option value="07">Jul (07)</option>
+													<option value="08">Ago (08)</option>
+													<option value="09">Sep (09)</option>
+													<option value="10">Oct (10)</option>
+													<option value="11">Nov (11)</option>
+													<option value="12">Dic (12)</option>
 												</select>
 											</div>
 											<div class="col-lg-6">
-												<select class="form-control" placeholder="Año de vencimiento">
+												<select class="form-control">
 													<option value="">Año de vencimiento</option>
 													<option value="16">2016</option>
 													<option value="17">2017</option>
@@ -170,59 +268,31 @@
 							</div>
 							</div>
 
-							<div class="panel-heading" role="tab" id="headingDos">
-								<h4 class="panel-title">
-									<div ng-class="validTab(2)">
-										<a ng-click="SetTab(2)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseDos">
-											<h3>
-												<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-												Tarjeta de Débito
-												<!--href="#collapseUno"-->
-												<i class="fa fa-cc-visa" aria-hidden="true"></i>
-												<i class="fa fa-cc-mastercard" aria-hidden="true"></i> 
-												<i class="fa fa-cc-amex" aria-hidden="true"></i>
-											</h3>
-										</a>
-									</div>
-								</h4>
-							</div>
-
-							<div ng-show="validTab(2)">
-							<div id="collapseDos" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingDos">
-								<div class="panel-body">
-									Hugo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-								</div>
-							</div>
-							</div>
-
 							<div class="panel-heading" role="tab" id="headingTres">
 								<h4 class="panel-title">
 									<div ng-class="validTab(3)">
 										<a ng-click="SetTab(3)" role="button" data-toggle="collapse" data-parent="#accord" aria-expanded="false" aria-controls="collapseTres">
-											Tarjeta de crédito
-											<!--href="#collapseUno"-->
+											<div class="container-fluid">												
+												<h3>
+												<div class="col-lg-12" align="left">
+													<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+													Otra forma de pago
+												</div>
+												<!--href="#collapseUno"-->
+												</h3>
+											</div>
 										</a>
 									</div>
 								</h4>
 							</div>
+
 							<div ng-show="validTab(3)">
 							<div id="collapseTres" class="panel-collapse collapse in" role="tabpanel" aria-labellebdy="headingTres">
 								<div class="panel-body">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									Paypal
 								</div>
 							</div>
 							</div>
-
 						</div>
 					</div>
 
@@ -232,7 +302,10 @@
 				</div>
 
 				<div class="modal-footer">
-					Pie de modal
+					<div align="right">
+						<button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Confirmar</button>
+					</div>
 				</div>
 			</div>
 		</div>
