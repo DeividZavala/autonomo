@@ -1,6 +1,6 @@
 (function(){
 
-	let confirm = {
+	var confirm = {
 		templateUrl:'app/components/confirm/confirm.html',
 		controller:confirmController
 	}

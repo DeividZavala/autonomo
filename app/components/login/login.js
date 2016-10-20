@@ -1,6 +1,6 @@
 (function(){
 
-	let login = {
+	var login = {
 	templateUrl:'app/components/login/index.html',
 	controller:loginController
 	}

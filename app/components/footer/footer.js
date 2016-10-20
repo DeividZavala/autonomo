@@ -1,10 +1,10 @@
 (function(){
-	let footer = {
+	var footer = {
 		templateUrl:'app/components/footer/index.html',
 		controller:footerController
 	}
 	function footerController(){
-		let self = this;
+		var self = this;
 	}
 	angular
 		.module('autonomo')
