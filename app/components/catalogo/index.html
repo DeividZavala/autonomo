@@ -18,57 +18,60 @@
             <h1> Encuentra tu auto ideal </h1>
         </div> 
 
+        <span>Buscador: </span><input type="text" placeholder="¿Qué auto o marca buscas?" ng-model="buscador">
+    <br>
+
 
 
 <br>
 <br>
 <br>
 
-<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true >
+<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
 
-<!-- 
-<div class="col-md-12" ng-repeat="producto in $ctrl.data">
+        
+        <div class="col-md-12" ng-repeat="producto in $ctrl.data | filter:buscador">
 
 
-                    <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url({{producto.img}})">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">{{producto.nombre}}</h3>
-                                         <p class="profession">{{producto.marca}}</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil de trabajo"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">{{producto.desc}}</p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/{{producto.id}}">Adquierelo Ahora</a>
+                            <div class="card-container">
+                                 <div class="card">
+                                     <div class="front">
+                                         <div class="cover" style="background-image:url({{producto.img}})">
+                                             
                                          </div>
+                                         
+                                         <div class="content">
+                                             <div class="main">
+                                                 <h3 class="name">{{producto.nombre}}</h3>
+                                                 <p class="profession">{{producto.marca}}</p>
 
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container                     
+                                                 
+                                             </div>
+                                             
+                                         </div>
+                                     </div> <!-- end front panel -->
+                                     <div class="back">
+                                         <div class="header">
+                                             <h5 class="motto">"Automovil de trabajo"</h5>
+                                         </div>
+                                         <div class="content">
+                                             <div class="main">
+                                                 <h4 class="text-center">Descripcion</h4>
+                                                 <p class="text-center">{{producto.desc}}</p>
 
-        </div> -->
+                                                 <div class="stats-container">
+                                                   
+                                                     <a class="btn btn-block btn-primary" href="#/mensualidad/{{producto.id}}">Adquierelo Ahora</a>
+                                                 </div>
+
+                                             </div>
+                                         </div>
+                                   
+                                     </div> <!-- end back panel -->
+                                 </div><!--  end card -->
+                             </div> <!-- end card-container   -->                   
+
+                </div> 
 
    
 
@@ -76,7 +79,7 @@
 </slick>
 
 
-<div  class="col-md-12 slid" >
+<!-- <div  class="col-md-12 slid" >
 
 
                     <div class="card-container">
@@ -95,7 +98,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil"</h5>
@@ -113,9 +116,9 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
                       <div class="card-container">
                          <div class="card">
@@ -133,7 +136,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil"</h5>
@@ -151,9 +154,9 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
 
                       <div class="card-container">
@@ -172,7 +175,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil de trabajo"</h5>
@@ -190,9 +193,9 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
 
                       <div class="card-container">
@@ -211,7 +214,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil"</h5>
@@ -229,9 +232,9 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
 
                       <div class="card-container">
@@ -250,7 +253,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil de trabajo"</h5>
@@ -268,9 +271,9 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
 
                       <div class="card-container">
@@ -289,7 +292,7 @@
                                      </div>
                                      
                                  </div>
-                             </div> <!-- end front panel -->
+                             </div> end front panel
                              <div class="back">
                                  <div class="header">
                                      <h5 class="motto">"Automovil"</h5>
@@ -307,14 +310,14 @@
                                      </div>
                                  </div>
                            
-                             </div> <!-- end back panel -->
-                         </div> <!-- end card -->
-                     </div> <!-- end card-container -->
+                             </div> end back panel
+                         </div> end card
+                     </div> end card-container
 
 
                                      
 
-        </div>
+        </div> -->
 
 
     </div>

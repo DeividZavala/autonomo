@@ -36,14 +36,19 @@
       </li>
       <li class="liss">
           <span style="cursor:pointer; margin-top: 30px" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">
-            Iniciar Sesión
+            <a href="">Iniciar Sesión</a>
           </span>
 
-          <span style="cursor:pointer; margin-top: 10px" ng-show="$ctrl.user" ng-click="$ctrl.logOut()">
-            <a href="#/perfil">
-            <img  style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
-            </a>
-            Cerrar Sesión
+          <span style="cursor:pointer; margin-top: 10px" ng-show="$ctrl.user">
+
+          <a href="#/perfil">
+
+              <img  style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}"></a>
+
+          <a ng-click="$ctrl.logOut()">
+              Cerrar Sesión
+          </a>
+            
           </span>
       </li>
     </ul>

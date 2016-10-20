@@ -1,6 +1,6 @@
 {
-	"autos":{
-		"1":{
+	"autos":[
+		{
 			"id":"1",
 			"nombre":"Versa",
 			"desc":"2017 Drive MT",
@@ -9,16 +9,16 @@
 			"precio":178900,
 			"mas_info":"https://www.nissan.com.mx/versa/"
 		},
-		"2":{
+		{
 			"id":"2",
 			"nombre":"Tsuru",
 			"desc":"2017 GSI TM EQP",
 			"marca":"Nissan",
-			"img":"https://userscontent2.emaze.com/images/034a686c-1fe5-4d67-b608-f80359c2eb79/b3aedb78-adf3-46eb-a5e3-e3db83324aa2image35.gif"x,
+			"img":"https://userscontent2.emaze.com/images/034a686c-1fe5-4d67-b608-f80359c2eb79/b3aedb78-adf3-46eb-a5e3-e3db83324aa2image35.gif",
 			"precio":142600,
 			"mas_info":"https://www.nissan.com.mx/tsuru/"
 		},
-		"3":{
+		{
 			"id":"3",
 			"nombre":"March",
 			"desc":"2017 Sense TM",
@@ -27,7 +27,7 @@
 			"precio":162900,
 			"mas_info":"https://www.nissan.com.mx/march/"
 		},
-		"4":{
+		{
 			"id":"4",
 			"nombre":"Aveo",
 			"desc":"2017 LS Manual con AA",
@@ -36,7 +36,7 @@
 			"precio":175900,
 			"mas_info":"http://www.chevrolet.com.mx/aveo.html"
 		},
-		"5":{
+		{
 			"id":"5",
 			"nombre":"Spark",
 			"desc":"2017 LT TM",
@@ -45,7 +45,7 @@
 			"precio":159900,
 			"mas_info":"http://www.chevrolet.com.mx/spark-2016.html"
 		},
-		"6":{
+		{
 			"id":"6",
 			"nombre":"Sentra",
 			"desc":"2017 Sense MT",
@@ -54,7 +54,7 @@
 			"precio":238800,
 			"mas_info":"https://www.nissan.com.mx/sentra/"
 		},
-		"7":{
+		{
 			"id":"7",
 			"nombre":"Vento",
 			"desc":"2017 Tiptronic",
@@ -63,7 +63,7 @@
 			"precio":179990,
 			"mas_info":"http://www.vw.com.mx/es/models/vento/vento.html"
 		},
-		"8":{
+		{
 			"id":"8",
 			"nombre":"NP300",
 			"desc":"2017 Chasis Cabina",
@@ -72,7 +72,7 @@
 			"precio":209600,
 			"mas_info":"http://www.nissan.com.mx/np300/"
 		},
-		"9":{
+		{
 			"id":"9",
 			"nombre":"X Trail",
 			"desc":"2017 Armor CVT",
@@ -81,7 +81,7 @@
 			"precio":366200,
 			"mas_info":"http://www.nissan.com.mx/x-trail/"
 		},
-		"10":{
+		{
 			"id":"10",
 			"nombre":"Jetta",
 			"desc":"2017 TM",
@@ -89,6 +89,6 @@
 			"img":"http://shebuyscars.com/wp-content/uploads/2014/10/Jetta-15-TDI-S.png",
 			"precio":229900,
 			"mas_info":"http://www.vw.com.mx/es/models/jetta.html"
-		}
-	}
+		}]
 }
+

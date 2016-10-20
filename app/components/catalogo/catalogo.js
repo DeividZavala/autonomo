@@ -1,24 +1,59 @@
 (function(){
 
 
-	let catalogo ={
+	var catalogo ={
 
 		controller : CatalogoController,
 		templateUrl: 'app/components/catalogo/index.html'
 	}
 
-	function CatalogoController(Api_service){
+	function CatalogoController(Api_service,$http){
 
-		let auto = this;
+		var self = this;
 
 		
-		Api_service.alls().then(function(response){
+	/*	Api_service.alls().then(function(response){
 
-			auto.data = response.data;
+			self.data = response.data;
 
-			console.log(auto.data);
+			console.log(self.data);
 
+		})*/
+
+		self.objeto =[];
+
+
+
+
+		var peticion  = function(){
+
+
+			$http({
+
+			method: 'GET',
+			url: 'http://localhost:8000/autos.json',
+			
+
+
+		}).then(function(response){
+
+			self.data = response.data.autos;
+			console.log(self.data);
+
+			
 		})
+
+
+
+
+		}
+
+
+		peticion();
+
+		
+
+		
 
 		
 
