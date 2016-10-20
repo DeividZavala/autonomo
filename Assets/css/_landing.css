@@ -58,8 +58,8 @@ section.l-slider{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 768px) {
   /* Navbar positioning foo */
+/*@media (min-width: 768px) {
   .navbar-wrapper {
     margin-top: 20px;
   }
@@ -72,18 +72,18 @@ section.l-slider{
     padding-left: 0;
   }
 
-  /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
     border-radius: 4px;
   }
 
-  /* Bump up size of carousel content */
 
   .featurette-heading {
     font-size: 100px;
   }
 
-}
+}*/
+  /* Bump up size of carousel content */
+  /* The navbar becomes detached from the top, so we round the corners */
 
 
   .sectionFormat{
