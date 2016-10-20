@@ -20,9 +20,7 @@
 
 		})*/
 
-		self.objeto =[];
-
-
+		
 
 
 		var peticion  = function(){
