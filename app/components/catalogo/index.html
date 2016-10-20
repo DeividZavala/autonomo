@@ -100,16 +100,17 @@
 
         <span>Encuentra facilmente: </span>
         <hr>
-
-        <input class="form-control" type="text" placeholder="¿Qué auto o marca buscas?" ng-model="buscador.nombre">
-        <br>
-        <select class="form-control" ng-model="buscador.marca">
+         <select class="form-control" ng-model="buscador.marca">
             <option value="">Marca</option>       
             <option value="nissan">Nissan</option>       
             <option value="chevrolet">Chevrolet</option>       
             <option value="volkswagen">Volkswagen</option>       
         </select>
         <br>
+
+        <input class="form-control" type="text" placeholder="¿Qué auto o marca buscas?" ng-model="buscador.nombre">
+        <br>
+       
         <select class="form-control" ng-model="buscador.cil">
             <option value=""># Cilindros</option>       
             <option value="4cil">4 cil</option>       
