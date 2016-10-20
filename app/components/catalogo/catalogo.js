@@ -26,19 +26,10 @@
 		var peticion  = function(){
 
 
-			$http({
-
-			method: 'GET',
-			url: 'http://localhost:8000/autos.json',
-			
-
-
-		}).then(function(response){
+			$http.get('/autos.json').then(function(response){
 
 			self.data = response.data.autos;
-			console.log(self.data);
-
-			
+			console.log(self.data);			
 		})
 
 

@@ -10,27 +10,180 @@
     border-radius: 3px;
     text-align: center;
 }
+
+
+.animate-enter { 
+    -webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    display: block;
+    position: relative;
+} 
+@-webkit-keyframes enter {
+    from {
+        opacity: 0;
+        height: 0px;
+        left: -70px;
+    }
+    75% {
+        left: 15px;
+    }
+    to {
+        opacity: 1;
+        height: 30px;
+        left: 0px;
+    }
+}
+@keyframes enter {
+    from {
+        opacity: 0;
+        height: 0px;
+        left: -70px;
+    }
+    75% {
+        left: 15px;
+    }
+    to {
+        opacity: 1;
+        height: 30px;
+        left: 0px;
+    }
+}
+
+.animate-leave { 
+    -webkit-animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    display: block;
+    position: relative;
+} 
+@-webkit-keyframes leave {
+    to {
+        opacity: 0;
+        height: 0px;
+        left: -70px;
+    }
+    25% {
+        left: 15px;
+    }
+    from {
+        opacity: 1;
+        height: 30px;
+        left: 0px;
+    }
+}
+@keyframes leave {
+    to {
+        opacity: 0;
+        height: 0px;
+        left: -70px;
+    }
+    25% {
+        left: 15px;
+    }
+    from {
+        opacity: 1;
+        height: 30px;
+        left: 0px;
+    }
+}
+
 </style>
-<div class="container-fluid">
+<div class="container">
     <div class="row card-container-master">
 
-        <div class="titulo">            
+    <div class="titulo">            
             <h1> Encuentra tu auto ideal </h1>
         </div> 
 
-        <span>Buscador: </span><input type="text" placeholder="¿Qué auto o marca buscas?" ng-model="buscador">
-    <br>
+    <div class="col-md-3">
 
 
 
-<br>
-<br>
-<br>
+        <span>Encuentra facilmente: </span>
+        <hr>
 
-<slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
+        <input class="form-control" type="text" placeholder="¿Qué auto o marca buscas?" ng-model="buscador.nombre">
+        <br>
+        <select class="form-control" ng-model="buscador.marca">
+            <option value="">Marca</option>       
+            <option value="nissan">Nissan</option>       
+            <option value="chevrolet">Chevrolet</option>       
+            <option value="volkswagen">Volkswagen</option>       
+        </select>
+        <br>
+        <select class="form-control" ng-model="buscador.cil">
+            <option value=""># Cilindros</option>       
+            <option value="4cil">4 cil</option>       
+            <option value="6cil">6 cil</option>       
+         
+        </select>
+        
+
+
+    </div>
+
+    
+
+
+
+
+
+<!-- <slick slides-to-show="3" arrows="true" slides-to-scroll="1" init-onload=true data="$ctrl.data">
 
         
-        <div class="col-md-12" ng-repeat="producto in $ctrl.data | filter: buscador">
+        <div class="col-md-12" ng-repeat="producto in $ctrl.data | filter : buscador">
+
+
+                            <div class="card-container">
+                                 <div class="card">
+                                     <div class="front">
+                                         <div class="cover" style="background-image:url({{producto.img}})">
+                                             
+                                         </div>
+                                         
+                                         <div class="content">
+                                             <div class="main">
+                                                 <h3 class="name">{{producto.nombre}}</h3>
+                                                 <p class="profession">{{producto.marca}}</p>
+
+                                                 
+                                             </div>
+                                             
+                                         </div>
+                                     </div> end front panel
+                                     <div class="back">
+                                         <div class="header">
+                                             <h5 class="motto">"Automovil de trabajo"</h5>
+                                         </div>
+                                         <div class="content">
+                                             <div class="main">
+                                                 <h4 class="text-center">Descripcion</h4>
+                                                 <p class="text-center">{{producto.desc}}</p>
+
+                                                 <div class="stats-container">
+                                                   
+                                                     <a class="btn btn-block btn-primary" href="#/mensualidad/{{producto.id}}">Adquierelo Ahora</a>
+                                                 </div>
+
+                                             </div>
+                                         </div>
+                                   
+                                     </div> end back panel
+                                 </div>end card
+                             </div> end card-container                   
+
+                </div> 
+
+   
+
+
+</slick> -->
+
+
+<div class="col-md-9">
+    
+    <div class="row">
+
+             <div class="col-md-3" ng-animate="'animate'" ng-repeat="producto in $ctrl.data | filter : buscador">
 
 
                             <div class="card-container">
@@ -57,6 +210,7 @@
                                          <div class="content">
                                              <div class="main">
                                                  <h4 class="text-center">Descripcion</h4>
+                                                 <p class="text-center">{{producto.cil}}</p>
                                                  <p class="text-center">{{producto.desc}}</p>
 
                                                  <div class="stats-container">
@@ -68,18 +222,20 @@
                                          </div>
                                    
                                      </div> <!-- end back panel -->
-                                 </div><!--  end card -->
-                             </div> <!-- end card-container   -->                   
+                                 </div><!-- end card -->
+                             </div> <!-- end card-container  -->                  
 
                 </div> 
-
-   
-
-
-</slick>
+        
 
 
-<!-- <div  class="col-md-12 slid" >
+
+    </div>
+</div>
+ 
+
+
+<!-- 
 
 
                     <div class="card-container">
@@ -120,204 +276,7 @@
                          </div> end card
                      </div> end card-container
 
-                      <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url('http://st.motortrend.com/uploads/sites/10/2015/11/2015-nissan-versa-1.6-sv-auto-sedan-angular-front.png')">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">Versa</h3>
-                                         <p class="profession">Nissan</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">2017 Drive MT</p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
-                                         </div>
-
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container
-
-
-                      <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url('https://userscontent2.emaze.com/images/034a686c-1fe5-4d67-b608-f80359c2eb79/b3aedb78-adf3-46eb-a5e3-e3db83324aa2image35.gif')">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">Tsuru</h3>
-                                         <p class="profession">Nissan</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil de trabajo"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">2017 GSI TM EQP</p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
-                                         </div>
-
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container
-
-
-                      <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url('http://www.unitycarrental.com/wp-content/uploads/car-rental-gallery/1463226906_Nissan-March.png')">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">Mach</h3>
-                                         <p class="profession">Wolkswagen</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">2017 Sense TM"</p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
-                                         </div>
-
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container
-
-
-                      <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url('http://speed-service.com.mx/wp-content/uploads/2016/01/chevroletaveo.png')">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">Aveo</h3>
-                                         <p class="profession">Chevrolet</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil de trabajo"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">2017 LS Manual con AA</p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
-                                         </div>
-
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container
-
-
-                      <div class="card-container">
-                         <div class="card">
-                             <div class="front">
-                                 <div class="cover" style="background-image:url('http://st.motortrend.com/uploads/sites/10/2016/07/2017-chevrolet-spark-ls-manual-hatchback-angular-front.png?interpolation=lanczos-none&fit=around%7C660%3A439&crop=660%3A439%3B*%2C*')">
-                                     
-                                 </div>
-                                 
-                                 <div class="content">
-                                     <div class="main">
-                                         <h3 class="name">Spark</h3>
-                                         <p class="profession">Chevrolet</p>
-
-                                         
-                                     </div>
-                                     
-                                 </div>
-                             </div> end front panel
-                             <div class="back">
-                                 <div class="header">
-                                     <h5 class="motto">"Automovil"</h5>
-                                 </div>
-                                 <div class="content">
-                                     <div class="main">
-                                         <h4 class="text-center">Descripcion</h4>
-                                         <p class="text-center">Nuevo Volkswagen Beetle 2017, un coche moderno en su interior y exterior. Descubre su diseño impactante y estilo único. ¡Te encantará! </p>
-
-                                         <div class="stats-container">
-                                           
-                                             <a class="btn btn-block btn-primary" href="#/mensualidad/1">Adquierelo Ahora</a>
-                                         </div>
-
-                                     </div>
-                                 </div>
-                           
-                             </div> end back panel
-                         </div> end card
-                     </div> end card-container
-
-
-                                     
-
-        </div> -->
+                     -->
 
 
     </div>
