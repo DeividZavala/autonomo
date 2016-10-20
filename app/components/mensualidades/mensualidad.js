@@ -27,16 +27,17 @@
 		  }
 		}); //checando el usuario
 
-		$http({
+		/*$http({
 			method: 'GET',
 			url: 'http://54.244.191.132/topten/'+cars.auto
 
-		}).then(function(response){
-			cars.data = response.data;
+		})*/
+		$http.get('/autos.json').then(function(response){
+			cars.data = response.data.autos[cars.auto];
 			console.log(cars.data);
 			cars.monthCar = function(meses){
 			mensualidad = meses;
-			month=cars.data.precio/mensualidad;
+			month=(cars.data.precio/mensualidad)*1.08;
 			console.log(month)
 			return month;
 		}; //month

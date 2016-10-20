@@ -9,15 +9,12 @@
 		 		 	
 		 		 		<div class="col-md-12 text-center">
 
-			 		 		<div class="d-img">
-						    	  <h1 class="py">Wolkswaguen - Beatle</h1>
-						    <!--   <img class="img-responsive" ng-src="{{$ctrl.data.img}}" > -->
-						     	 <img  align="center" width="400px" src="http://pngimg.com/upload/volkswagen_PNG1794.png" >
+			 		 		<div class="d-img text-center">
+						    	  <h1 class="py">{{$ctrl.data.nombre}}</h1>
+						     <img  align="center"  width="400px"  ng-src="{{$ctrl.data.img}}" > 
+						  <!--  <img  align="center" width="400px" src="http://pngimg.com/upload/volkswagen_PNG1794.png" > -->
 
-							      <div class="caption">
-								        <h3 class="py">{{$ctrl.data.nombre}}</h3>
-								        <p>{{$ctrl.data.desc}}</p>		        
-							      </div>
+							     
 						    </div>
 		 		 			
 		 		 			
@@ -125,14 +122,14 @@
 				</ul>
 					
 					<div class="panel" ng-show="$ctrl.tab===1" >
-						<h1 class="py">$6,720.52</h1>
-					<!-- 	<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1> -->
+						<!-- <h1 class="py">$6,720.52</h1> -->
+						<h1 class="py">{{$ctrl.monthCar(48) | currency}}</h1> 
 						<h4 class="py">48 Mensualidades </h4>
 						
 						<hr>
 
-		<!-- 			<h1 class="py">{{$ctrl.feeCar() | currency}}</h1> -->
-						<h1 class="py">$2,969.00</h1>
+		 			<h1 class="py">{{$ctrl.feeCar() | currency}}</h1> 
+						<!-- <h1 class="py">$2,969.00</h1> -->
 						<h4 class="py">Cuota de inscripcion</h4>
 						
 						<hr>
@@ -141,14 +138,14 @@
 
 					</div>
 					<div class="panel" ng-show="$ctrl.isSelected(2)">
-						<h1 class="py">$5,376.42</h1>
-				   <!-- <h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1> -->
+						<!-- <h1 class="py">$5,376.42</h1> -->
+				   <h1 class="py">{{$ctrl.monthCar(60) | currency}}</h1>
 						<h4 class="py">60 Mensualidades </h4>
 
 						
 						<hr>
-				   <!-- <h1 class="py">{{$ctrl.feeCar() | currency}}</h1> -->
-						<h1 class="py">$2,969.00</h1>
+				   <h1 class="py">{{$ctrl.feeCar() | currency}}</h1> 
+						<!-- <h1 class="py">$2,969.00</h1> -->
 						<h4 class="py">Cuota de inscripcion</h4>
 						
 						<hr>
