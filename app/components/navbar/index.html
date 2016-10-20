@@ -1,59 +1,60 @@
-<nav class="navbar navbar-default nava" role="navigation">
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Desplegar Menú</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <figure class="logo">
-      <a href="#/">
-        <img style="height:45px;margin:3px 0px 0px 0px;" src="Assets/img/logo_sin_texto.png">
-      </a>
-    </figure>
-  </div>
- 
-  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
-       otro elemento que se pueda ocultar al minimizar la barra -->
-  <div  class="collapse navbar-collapse navbar-ex1-collapse right navaback" style="padding-right: 30px">
-    <ul class="nav navbar-nav navbar-right">
-      <li style="">
-      <a href="javascript:void(0)">
-      <button type="button" class="btn btn-primary btn-lg btn-circle" data-toggle="modal" data-target="#myModal">
-            ¿Como funciona?
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Speisekarte</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
-       </a>
-       </li>
-      <li>
-        <a href="#/cotizacion">
-          <button type="button" class="btn btn-primary btn-lg btn-circle">
-            Cotiza Tu Auto
-          </button>
-        </a>
-      </li>
-      <li class="liss">
-          <span style="cursor:pointer; margin-top: 30px" ng-hide="$ctrl.user" ng-click="$ctrl.logIn()">
-            <a href="">Iniciar Sesión</a>
-          </span>
+      <a class="navbar-brand" href="#">
+          <img style="width:45px" src="Assets/img/logo_sin_texto.png">
+      </a>
+    </div>
 
-          <span style="cursor:pointer; margin-top: 10px" ng-show="$ctrl.user">
-
-          <a href="#/perfil">
-
-              <img  style="width:40px;border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}"></a>
-
-          <a ng-click="$ctrl.logOut()">
-              Cerrar Sesión
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="padd">
+      <ul class="nav navbar-nav navbar-right" align="center">
+        <li>
+          <a href="javascript:void(0)">
+            <button type="button" class="btn btn-circle" data-toggle="modal" data-target="#myModal">
+              ¿Cómo Funciona?
+            </button>
           </a>
-            
+        </li>
+        <li>
+          <a href="#/cotizacion">
+            <button type="button" class="btn btn-circle">
+              ¡Cotiza Tu Auto!
+            </button>
+          </a>
+        </li>
+        <li>
+          <a ng-hide="$ctrl.user" ng-click="$ctrl.logIn()" class="pointer">
+            Iniciar Sesión
+          </a>
+        </li>
+        <li class="textnavv">
+          
+          <span ng-show="$ctrl.user" class="pointer">
+            <a href="#/perfil">
+              <img style="width: 40px; border-radius:90%;" ng-src="{{$ctrl.user.photoURL}}">
+            </a>
+            <a ng-click="$ctrl.logOut()">
+              Cerrar Sesión
+            </a>
           </span>
-      </li>
-    </ul>
-  </div>
+        </li>
+      </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
