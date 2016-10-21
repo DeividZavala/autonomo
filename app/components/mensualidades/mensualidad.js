@@ -42,7 +42,7 @@
 			return month;
 		}; //month
 		cars.feeCar = function(){
-			fee=cars.data.precio*.01;
+			fee=(cars.data.precio*1.08)*.01;
 			console.log(fee)
 			return fee;
 		};//fee
